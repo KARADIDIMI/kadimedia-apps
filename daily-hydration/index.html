@@ -10,179 +10,102 @@
 <link rel="alternate" hreflang="en" href="https://app.kadimedia.com/daily-hydration/en/">
 <link rel="icon" type="image/png" href="/daily-hydration/assets/icon.png">
 <link rel="apple-touch-icon" href="/daily-hydration/assets/icon.png">
-<meta property="og:title" content="Daily Hydration">
+<meta property="og:title" content="Daily Hydration – Trinken erfassen. Tagesziel erreichen.">
 <meta property="og:description" content="Daily Hydration ist die einfache Trink-App für iPhone, Apple Watch und Android: Getränke mit einem Tipp erfassen, Tagesziel im Blick behalten. Ohne Konto, ohne Werbung.">
-<meta property="og:image" content="https://app.kadimedia.com/daily-hydration/assets/banner.jpg">
 <meta property="og:type" content="website">
-<style>
-  :root { color-scheme: light dark; --blue:#0a7cff; --blue-d:#0050c0; --ink:#14181f; --muted:#5b6472; --bg:#fff; --soft:#f2f6fc; --line:#e3e8f0; }
-  @media (prefers-color-scheme: dark) { :root { --ink:#eef2f8; --muted:#9aa5b5; --bg:#0e1116; --soft:#161b23; --line:#262d38; } }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
-  img { max-width:100%; height:auto; display:block; }
-  a { color:var(--blue); }
-  .wrap { max-width:68rem; margin:0 auto; padding:0 1.25rem; }
-  header.top { position:sticky; top:0; z-index:5; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
-  header.top .wrap { display:flex; align-items:center; gap:1rem; height:3.5rem; }
-  .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; color:var(--ink); text-decoration:none; }
-  .brand img { width:30px; height:30px; border-radius:8px; }
-  nav { margin-left:auto; display:flex; align-items:center; gap:1.1rem; font-size:.95rem; }
-  nav a { color:var(--muted); text-decoration:none; }
-  nav a:hover { color:var(--ink); }
-  nav .pill { color:#fff; background:var(--blue); padding:.35rem .9rem; border-radius:999px; font-weight:600; }
-  nav .pill:hover { color:#fff; background:var(--blue-d); }
-  @media (max-width:40rem) { nav a.hide-s { display:none; } }
-
-  .hero { background:linear-gradient(160deg,#0a84ff 0%,#0050c0 100%); color:#fff; overflow:hidden; }
-  .hero .wrap { display:grid; grid-template-columns:1.05fr 1fr; gap:2rem; align-items:center; padding-top:3.5rem; padding-bottom:3.5rem; }
-  .eyebrow { display:inline-block; font-size:.85rem; font-weight:600; letter-spacing:.02em; background:rgba(255,255,255,.16); padding:.3rem .8rem; border-radius:999px; margin:0 0 1.1rem; }
-  .hero h1 { font-size:clamp(2.2rem,5.2vw,3.5rem); line-height:1.08; margin:0 0 1rem; letter-spacing:-.02em; }
-  .hero p.lead { font-size:1.12rem; max-width:34rem; margin:0 0 1.5rem; opacity:.95; }
-  .chips { display:flex; flex-wrap:wrap; gap:.5rem; margin:0 0 1.75rem; }
-  .chips span { font-size:.85rem; border:1px solid rgba(255,255,255,.45); padding:.25rem .75rem; border-radius:999px; }
-  .stores { display:flex; flex-wrap:wrap; gap:.75rem; }
-  .store { display:inline-flex; align-items:center; gap:.65rem; background:#000; color:#fff; border:1px solid rgba(255,255,255,.35); border-radius:.8rem; padding:.55rem 1.1rem .55rem .9rem; line-height:1.15; cursor:default; opacity:.92; }
-  .store small { display:block; font-size:.7rem; opacity:.8; }
-  .store b { font-size:1.1rem; font-weight:600; }
-  .hero .art img { border-radius:1.25rem; box-shadow:0 24px 60px rgba(0,20,70,.45); }
-  @media (max-width:52rem) { .hero .wrap { grid-template-columns:1fr; padding-top:2.25rem; } }
-
-  .intro { text-align:center; padding:4.5rem 0 1rem; }
-  .intro h2 { font-size:clamp(1.7rem,3.6vw,2.3rem); margin:0 0 .6rem; letter-spacing:-.01em; }
-  .intro p { max-width:40rem; margin:0 auto; color:var(--muted); font-size:1.08rem; }
-
-  .feature { display:grid; grid-template-columns:1fr 1.1fr; gap:3rem; align-items:center; padding:3rem 0; }
-  .feature.flip .shot { order:2; }
-  .shot { justify-self:center; width:min(100%,20rem); }
-  .shot img { border-radius:1.4rem; box-shadow:0 18px 44px rgba(10,60,140,.28); }
-  .kicker { color:var(--blue); font-weight:600; margin:0 0 .4rem; }
-  .feature h3 { font-size:clamp(1.5rem,3.2vw,2rem); line-height:1.2; margin:0 0 .8rem; letter-spacing:-.01em; }
-  .feature p { margin:0 0 1rem; color:var(--muted); font-size:1.05rem; }
-  .feature ul { margin:0; padding:0; list-style:none; }
-  .feature li { position:relative; padding:.3rem 0 .3rem 1.7rem; }
-  .feature li::before { content:""; position:absolute; left:0; top:.72rem; width:.9rem; height:.9rem; border-radius:50%; background:var(--blue); box-shadow:inset 0 0 0 .22rem var(--bg); outline:2px solid var(--blue); }
-  @media (max-width:52rem) { .feature { grid-template-columns:1fr; gap:1.5rem; padding:2rem 0; } .feature.flip .shot { order:0; } }
-
-  .more { background:var(--soft); padding:3.5rem 0; margin-top:2rem; }
-  .more h2 { text-align:center; margin:0 0 1.75rem; font-size:1.7rem; }
-  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:1rem; }
-  .card { background:var(--bg); border:1px solid var(--line); border-radius:1rem; padding:1.25rem; }
-  .card h4 { margin:0 0 .35rem; font-size:1.05rem; }
-  .card p { margin:0; color:var(--muted); font-size:.95rem; }
-
-  .cta { background:linear-gradient(160deg,#0a84ff 0%,#0050c0 100%); color:#fff; text-align:center; padding:4rem 0; }
-  .cta h2 { font-size:clamp(1.7rem,3.8vw,2.4rem); margin:0 0 .7rem; }
-  .cta p { max-width:36rem; margin:0 auto 1.6rem; opacity:.95; }
-  .cta .stores { justify-content:center; }
-  .cta .note { font-size:.9rem; opacity:.85; margin:1.5rem auto 0; }
-
-  footer { padding:2.25rem 0 3rem; color:var(--muted); font-size:.9rem; }
-  footer .links { display:flex; flex-wrap:wrap; gap:.4rem 1.25rem; margin:0 0 1rem; }
-  footer p { margin:.25rem 0; }
-</style>
+<meta property="og:image" content="https://app.kadimedia.com/daily-hydration/assets/banner.jpg">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="#top"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
-  <nav>
-    <a class="hide-s" href="#features">Funktionen</a>
-    <a class="hide-s" href="/daily-hydration/datenschutz/">Datenschutz</a>
-    <a href="/daily-hydration/en/" hreflang="en">English</a>
-    <a class="pill" href="#get">Die App holen</a>
-  </nav>
+  <a class="brand" href="/daily-hydration/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
+  <nav><a class="hide-s" href="#features">Funktionen</a><a class="hide-s" href="#pricing">Preise</a><a class="hide-s" href="/daily-hydration/datenschutz/">Datenschutz</a><a class="hide-s" href="/kontakt/">Kontakt</a><a class="pill" href="#get">Die App holen</a><a href="/daily-hydration/en/" hreflang="en">English</a></nav>
 </div></header>
-
 <main id="top">
   <div class="hero"><div class="wrap">
-    <div>
-      <p class="eyebrow">Für iPhone, Apple Watch & Android</p>
-      <h1>Trinken erfassen.<br>Tagesziel erreichen.</h1>
-      <p class="lead">Daily Hydration zeigt dir auf einen Blick, wie weit du heute bist. Ein Tipp pro Getränk, eine Füllanzeige, die motiviert – ohne Konto und ohne Werbung.</p>
-      <div class="chips"><span>Ohne Konto</span><span>Ohne Werbung</span><span>Deine Daten bleiben bei dir</span></div>
-      <div class="stores">
+    <div><p class="eyebrow">Für iPhone, Apple Watch & Android</p><h1>Trinken erfassen.<br>Tagesziel erreichen.</h1><p class="lead">Daily Hydration zeigt dir auf einen Blick, wie weit du heute bist. Ein Tipp pro Getränk, eine Füllanzeige, die motiviert – ohne Konto und ohne Werbung.</p>
+      <div class="chips"><span>Ohne Konto</span><span>Ohne Werbung</span><span>Deine Daten bleiben bei dir</span></div><div class="stores">
         <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.63 1.1 8.8.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.1c.6-.74 1.01-1.75.9-2.77-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.69.97.07 1.96-.49 2.57-1.23z"/></svg><span><small>Bald im</small><b>App Store</b></span></span>
         <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M4.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1 9.2-9.2v-.2L4.7 2.3l-.1.1zm12.3 6.4l-3 3 3 3 3.6-2.1c1-.6 1-1.5 0-2.1l-3.6-1.8zM14 12.2l-9.3 9.3c.3.3.9.4 1.5 0l10.9-6.2-3.1-3.1zM14 11.8l3.1-3.1L6.2 2.5c-.6-.4-1.2-.3-1.5 0l9.3 9.3z"/></svg><span><small>Bald bei</small><b>Google Play</b></span></span>
-      </div>
-    </div>
+      </div></div>
     <div class="art"><img src="/daily-hydration/assets/banner.jpg" alt="Daily Hydration: Trinken erfassen. Tagesziel erreichen." width="1024" height="500"></div>
   </div></div>
-
-  <div class="wrap" id="features">
-    <div class="intro"><h2>Alles, was du zum Trinken brauchst</h2><p>Daily Hydration bleibt bewusst einfach – und bietet trotzdem genug, um dein Trinkverhalten wirklich zu verstehen.</p></div>
-    
+  <div class="wrap" id="features"><div class="intro"><h2>Alles, was du zum Trinken brauchst</h2><p>Daily Hydration bleibt bewusst einfach – und bietet trotzdem genug, um dein Trinkverhalten wirklich zu verstehen.</p></div>
     <section class="feature">
       <div class="shot"><img src="/daily-hydration/assets/shot-01.jpg" alt="Dein Tag auf einen Blick" loading="lazy" width="360" height="640"></div>
-      <div class="copy">
-        <p class="kicker">Die Füllanzeige zeigt dir sofort, wie weit du heute bist.</p>
-        <h3>Dein Tag auf einen Blick</h3>
-        <p>Eine Karaffe füllt sich mit jedem Getränk. Du siehst sofort, wie viel du getrunken hast und wie viel zum Tagesziel fehlt. Das Ziel stellst du selbst ein oder lässt es automatisch aus Alter, Gewicht, Aktivität und Temperatur berechnen.</p>
-        <ul><li>Füllanzeige mit Fortschritt in Millilitern und Prozent</li><li>Tagesziel manuell oder automatisch</li><li>Erinnerungen, die dich sanft ans Trinken erinnern</li></ul>
-      </div>
+      <div class="copy"><p class="kicker">Die Füllanzeige zeigt dir sofort, wie weit du heute bist.</p><h3>Dein Tag auf einen Blick</h3><p>Eine Karaffe füllt sich mit jedem Getränk. Du siehst sofort, wie viel du getrunken hast und wie viel zum Tagesziel fehlt. Das Ziel stellst du selbst ein oder lässt es automatisch aus Alter, Gewicht, Aktivität und Temperatur berechnen.</p><ul><li>Füllanzeige mit Fortschritt in Millilitern und Prozent</li><li>Tagesziel manuell oder automatisch</li><li>Erinnerungen, die dich sanft ans Trinken erinnern</li></ul></div>
     </section>
     <section class="feature flip">
       <div class="shot"><img src="/daily-hydration/assets/shot-02.jpg" alt="Trinken in Sekunden erfassen" loading="lazy" width="360" height="640"></div>
-      <div class="copy">
-        <p class="kicker">Ein Tipp für Wasser, Kaffee, Tee und mehr – auch eigene Getränke.</p>
-        <h3>Trinken in Sekunden erfassen</h3>
-        <p>Wähle die Menge, tippe auf dein Getränk – fertig. Ein kurzer Hinweis bestätigt den Eintrag, und mit einem Tipp machst du ihn rückgängig, falls du dich vertippt hast. Vergessenes trägst du einfach nach.</p>
-        <ul><li>Wasser, Kaffee, Tee, Saft, Softdrink, Limonade, Suppe & Brühe und mehr</li><li>Eigene Getränke mit eigenen Werten anlegen</li><li>Einträge nachträglich ergänzen</li></ul>
-      </div>
+      <div class="copy"><p class="kicker">Ein Tipp für Wasser, Kaffee, Tee und mehr – auch eigene Getränke.</p><h3>Trinken in Sekunden erfassen</h3><p>Wähle die Menge, tippe auf dein Getränk – fertig. Ein kurzer Hinweis bestätigt den Eintrag, und mit einem Tipp machst du ihn rückgängig, falls du dich vertippt hast. Vergessenes trägst du einfach nach.</p><ul><li>Wasser, Kaffee, Tee, Saft, Softdrink, Limonade, Suppe & Brühe und mehr</li><li>Eigene Getränke mit eigenen Werten anlegen</li><li>Einträge nachträglich ergänzen</li></ul></div>
     </section>
     <section class="feature">
       <div class="shot"><img src="/daily-hydration/assets/shot-03.jpg" alt="Behälter nach deinem Geschmack" loading="lazy" width="360" height="640"></div>
-      <div class="copy">
-        <p class="kicker">Karaffe, Glas, Flasche oder Pixel-Emoji.</p>
-        <h3>Behälter nach deinem Geschmack</h3>
-        <p>Gib deinem Tag ein Gesicht: Der Behälter auf dem Startbildschirm lässt sich wechseln – vom klassischen Glas bis zum Pixel-Smiley, dessen Ausdruck sich mit deinem Trinkstand ändert.</p>
-        <ul><li>Karaffe, Trinkglas, PET-Flaschen und Pixel-Emoji</li><li>Einige Designs sind Teil von Premium</li></ul>
-      </div>
+      <div class="copy"><p class="kicker">Karaffe, Glas, Flasche oder Pixel-Emoji.</p><h3>Behälter nach deinem Geschmack</h3><p>Gib deinem Tag ein Gesicht: Der Behälter auf dem Startbildschirm lässt sich wechseln – vom klassischen Glas bis zum Pixel-Smiley, dessen Ausdruck sich mit deinem Trinkstand ändert.</p><ul><li>Karaffe, Trinkglas, PET-Flaschen und Pixel-Emoji</li><li>Einige Designs sind Teil von Premium</li></ul></div>
     </section>
     <section class="feature flip">
       <div class="shot"><img src="/daily-hydration/assets/shot-04.jpg" alt="Verstehe dein Trinkverhalten" loading="lazy" width="360" height="640"></div>
-      <div class="copy">
-        <p class="kicker">Auswertung nach Woche und Monat – mit Kalorien und Koffein.</p>
-        <h3>Verstehe dein Trinkverhalten</h3>
-        <p>Die Auswertung zeigt dir, was und wie viel du trinkst – nach Tag, Woche, Monat und Jahr. Dazu siehst du, wie sich Wasser, Tee, Kaffee und Co. auf deine Kalorien und dein Koffein verteilen.</p>
-        <ul><li>Menge, Kalorien und Koffein im Verlauf</li><li>Anteil der Getränkearten auf einen Blick</li><li>Erweiterte Auswertungen mit Premium</li></ul>
-      </div>
+      <div class="copy"><p class="kicker">Auswertung nach Woche und Monat – mit Kalorien und Koffein.</p><h3>Verstehe dein Trinkverhalten</h3><p>Die Auswertung zeigt dir, was und wie viel du trinkst – nach Tag, Woche, Monat und Jahr. Dazu siehst du, wie sich Wasser, Tee, Kaffee und Co. auf deine Kalorien und dein Koffein verteilen.</p><ul><li>Menge, Kalorien und Koffein im Verlauf</li><li>Anteil der Getränkearten auf einen Blick</li><li>Erweiterte Auswertungen mit Premium</li></ul></div>
     </section>
     <section class="feature">
       <div class="shot"><img src="/daily-hydration/assets/shot-05.jpg" alt="Deine Daten gehören dir" loading="lazy" width="360" height="640"></div>
-      <div class="copy">
-        <p class="kicker">Export und Import als CSV, optional Health-Anbindung. Ohne Konto, ohne Werbung.</p>
-        <h3>Deine Daten gehören dir</h3>
-        <p>Deine Einträge liegen auf deinem Gerät. Du kannst sie jederzeit als CSV-Datei sichern, importieren oder komplett löschen. Auf Wunsch tauscht die App Daten mit Apple Health bzw. Health Connect aus.</p>
-        <ul><li>Kein Nutzerkonto, keine Werbung, kein Tracking</li><li>CSV-Export und -Import, auch zwischen iPhone und Android</li><li>Alle Daten jederzeit löschbar</li></ul>
-      </div>
-    </section>
-  </div>
-
-  <div class="more"><div class="wrap">
-    <h2>Und außerdem</h2>
-    <div class="cards"><div class="card"><h4>Widgets</h4><p>Behalte dein Tagesziel direkt auf dem Home-Bildschirm im Blick.</p></div><div class="card"><h4>Apple Watch</h4><p>Getränke direkt am Handgelenk erfassen (iPhone-Version).</p></div><div class="card"><h4>Hell & Dunkel</h4><p>Passt sich dem Erscheinungsbild deines Geräts an.</p></div><div class="card"><h4>Deutsch & Englisch</h4><p>Die App spricht beide Sprachen.</p></div></div>
-  </div></div>
-
-  <div class="cta" id="get"><div class="wrap">
-    <h2>Bleib hydriert – jeden Tag</h2>
-    <p>Daily Hydration kommt für iPhone und Android. Sobald die App in den Stores verfügbar ist, findest du hier die Links.</p>
-    <div class="stores">
+      <div class="copy"><p class="kicker">Export und Import als CSV, optional Health-Anbindung. Ohne Konto, ohne Werbung.</p><h3>Deine Daten gehören dir</h3><p>Deine Einträge liegen auf deinem Gerät. Du kannst sie jederzeit als CSV-Datei sichern, importieren oder komplett löschen. Auf Wunsch tauscht die App Daten mit Apple Health bzw. Health Connect aus.</p><ul><li>Kein Nutzerkonto, keine Werbung, kein Tracking</li><li>CSV-Export und -Import, auch zwischen iPhone und Android</li><li>Alle Daten jederzeit löschbar</li></ul></div>
+    </section></div>
+  <div class="more"><div class="wrap"><h2>Und außerdem</h2><div class="cards"><div class="card"><h4>Widgets</h4><p>Behalte dein Tagesziel direkt auf dem Home-Bildschirm im Blick.</p></div><div class="card"><h4>Apple Watch</h4><p>Getränke direkt am Handgelenk erfassen (iPhone-Version).</p></div><div class="card"><h4>Hell & Dunkel</h4><p>Passt sich dem Erscheinungsbild deines Geräts an.</p></div><div class="card"><h4>Deutsch & Englisch</h4><p>Die App spricht beide Sprachen.</p></div></div></div></div>
+  <section class="pricing" id="pricing"><div class="wrap">
+    <h2>Preise</h2>
+    <p class="lead">Daily Hydration ist in den Grundfunktionen kostenlos. Mit Premium schaltest du weitere Funktionen frei.</p>
+    <div class="carousel" id="car">
+      <button class="cbtn prev" type="button" aria-label="Vorheriger Tarif">‹</button>
+      <div class="track" tabindex="0"><article class="plan"><h3>Basis</h3>
+        <div class="price">Kostenlos</div><p class="per">für immer</p><ul><li>Getränke erfassen</li><li>Füllanzeige & Tagesziel</li><li>Erinnerungen</li><li>Widgets</li><li>Export als CSV</li></ul><p class="foot">Ohne Konto, ohne Werbung.</p></article><article class="plan hl"><span class="tag">Premium</span><h3>Premium</h3>
+        <div class="price">Preis folgt</div><p class="per">Angaben in Kürze</p><ul><li>Alle Behälter-Designs</li><li>Erweiterte Auswertungen</li><li>Kalorien & Koffein im Verlauf</li><li>Health-Anbindung mit Zusatzwerten</li></ul><p class="foot">Der genaue Preis steht vor dem Kauf im App Store bzw. bei Google Play.</p></article><article class="plan"><h3>Weitere Pläne</h3>
+        <div class="price">Folgt</div><p class="per">in Planung</p><ul><li>Hier erscheinen künftig weitere Optionen.</li></ul><p class="foot">Platzhalter – Inhalte folgen.</p></article></div>
+      <button class="cbtn next" type="button" aria-label="Nächster Tarif">›</button>
+      <div class="dots"><i></i><i></i><i></i></div>
+    </div>
+    <p class="price-note">Preisangaben sind noch Platzhalter und folgen vor dem Marktstart.</p>
+  </div></section>
+  <div class="cta" id="get"><div class="wrap"><h2>Bleib hydriert – jeden Tag</h2><p>Daily Hydration kommt für iPhone und Android. Sobald die App in den Stores verfügbar ist, findest du hier die Links.</p><div class="stores">
         <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.63 1.1 8.8.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.1c.6-.74 1.01-1.75.9-2.77-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.69.97.07 1.96-.49 2.57-1.23z"/></svg><span><small>Bald im</small><b>App Store</b></span></span>
         <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M4.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1 9.2-9.2v-.2L4.7 2.3l-.1.1zm12.3 6.4l-3 3 3 3 3.6-2.1c1-.6 1-1.5 0-2.1l-3.6-1.8zM14 12.2l-9.3 9.3c.3.3.9.4 1.5 0l10.9-6.2-3.1-3.1zM14 11.8l3.1-3.1L6.2 2.5c-.6-.4-1.2-.3-1.5 0l9.3 9.3z"/></svg><span><small>Bald bei</small><b>Google Play</b></span></span>
-      </div>
-    <p class="note">Die Grundfunktionen sind kostenlos. Einige Behälter-Designs und erweiterte Auswertungen gibt es mit Premium.</p>
-  </div></div>
+      </div><p class="note">Die Grundfunktionen sind kostenlos. Einige Behälter-Designs und erweiterte Auswertungen gibt es mit Premium.</p></div></div>
 </main>
-
-<footer><div class="wrap">
+<footer class="site"><div class="wrap">
   <div class="links">
     <strong>Rechtliches:</strong>
     <a href="/daily-hydration/datenschutz/ios/">Datenschutz (iOS)</a>
     <a href="/daily-hydration/datenschutz/android/">Datenschutz (Android)</a>
+    <a href="/kontakt/">Kontakt</a>
     <a href="/impressum/">Impressum</a>
   </div>
   <p>Eine App von Dimitrios Karadimos · KADIMEDIA</p>
   <p>Apple, iPhone, Apple Watch und App Store sind Marken der Apple Inc. Google Play und Android sind Marken von Google LLC.</p>
 </div></footer>
+<script>
+(function(){
+  var car=document.getElementById('car'); if(!car) return;
+  var track=car.querySelector('.track'), prev=car.querySelector('.prev'), next=car.querySelector('.next');
+  var cards=[].slice.call(track.children), dots=[].slice.call(car.querySelectorAll('.dots i'));
+  function step(){ return cards[0].getBoundingClientRect().width + 18; }
+  function update(){
+    var max=track.scrollWidth-track.clientWidth-2;
+    prev.disabled=track.scrollLeft<=2; next.disabled=track.scrollLeft>=max;
+    var center=track.scrollLeft+track.clientWidth/2, best=0, bd=1e9;
+    cards.forEach(function(c,i){var d=Math.abs(c.offsetLeft+c.offsetWidth/2-center); if(d<bd){bd=d;best=i;}});
+    dots.forEach(function(d,i){d.className=i===best?'on':'';});
+    var overflow=track.scrollWidth>track.clientWidth+4;
+    prev.hidden=next.hidden=!overflow; car.querySelector('.dots').hidden=!overflow;
+  }
+  prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
+  next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
+  track.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'){track.scrollBy({left:step(),behavior:'smooth'});e.preventDefault();}
+    if(e.key==='ArrowLeft'){track.scrollBy({left:-step(),behavior:'smooth'});e.preventDefault();}
+  });
+  track.addEventListener('scroll',function(){window.requestAnimationFrame(update);},{passive:true});
+  window.addEventListener('resize',update); update();
+})();
+</script>
 </body>
 </html>
