@@ -19,8 +19,27 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="/daily-hydration/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
-  <nav><a class="hide-s" href="#features">Funktionen</a><a class="hide-s" href="#pricing">Preise</a><a class="hide-s" href="/daily-hydration/datenschutz/">Datenschutz</a><a class="hide-s" href="/kontakt/">Kontakt</a><a class="pill" href="#get">Die App holen</a><a href="/daily-hydration/en/" hreflang="en">English</a></nav>
-</div></header>
+  <nav>
+    <a class="hide-s" href="/daily-hydration/#features">Funktionen</a>
+    <a class="hide-s" href="/daily-hydration/#pricing">Preise</a>
+    <div class="dd hide-s"><a class="ddlink" href="/daily-hydration/datenschutz/">Datenschutz</a><button class="ddbtn" type="button" aria-label="Datenschutz – Auswahl" aria-expanded="false" aria-haspopup="true">▾</button>
+      <div class="ddmenu"><div class="box"><a href="/daily-hydration/datenschutz/ios/">iOS (iPhone &amp; Apple Watch)</a><a href="/daily-hydration/datenschutz/android/">Android</a></div></div></div>
+    <a class="hide-s" href="/kontakt/">Kontakt</a>
+    <div class="dd lang"><button class="ddbtn wide" type="button" aria-label="Sprache wählen" aria-expanded="false" aria-haspopup="true"><span class="lt">Sprache – </span><b>DE</b> ▾</button>
+      <div class="ddmenu right"><div class="box"><a href="/daily-hydration/" aria-current="page">Deutsch</a><a href="/daily-hydration/en/">English</a></div></div></div>
+    <a class="pill" href="/daily-hydration/#get">Die App holen</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Menü" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="b1" d="M4 7h16M4 12h16M4 17h16"/><path class="b2" d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="mpanel" id="mnav" hidden><div class="wrap">
+    <a href="/daily-hydration/#features">Funktionen</a>
+    <a href="/daily-hydration/#pricing">Preise</a>
+    <a href="/daily-hydration/datenschutz/">Datenschutz</a>
+    <a class="sub" href="/daily-hydration/datenschutz/ios/">iOS (iPhone &amp; Apple Watch)</a>
+    <a class="sub" href="/daily-hydration/datenschutz/android/">Android</a>
+    <a href="/kontakt/">Kontakt</a>
+    <a class="pill" href="/daily-hydration/#get">Die App holen</a>
+  </div></div></header>
 <main id="top">
   <div class="hero"><div class="wrap">
     <div><p class="eyebrow">Für iPhone, Apple Watch & Android</p><h1>Trinken erfassen.<br>Tagesziel erreichen.</h1><p class="lead">Daily Hydration zeigt dir auf einen Blick, wie weit du heute bist. Ein Tipp pro Getränk, eine Füllanzeige, die motiviert – ohne Konto und ohne Werbung.</p>
@@ -82,6 +101,19 @@
   <p>Eine App von Dimitrios Karadimos · KADIMEDIA</p>
   <p>Apple, iPhone, Apple Watch und App Store sind Marken der Apple Inc. Google Play und Android sind Marken von Google LLC.</p>
 </div></footer>
+<script>
+(function(){
+  function closeAll(except){document.querySelectorAll('.dd.open').forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.ddbtn').setAttribute('aria-expanded','false');}});}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.ddbtn'), d=b?b.closest('.dd'):null; closeAll(d);
+    if(d){var o=d.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');}
+  });
+  var bg=document.querySelector('.burger'), mp=document.getElementById('mnav');
+  function menu(open){if(!bg||!mp)return; mp.hidden=!open; bg.setAttribute('aria-expanded',open?'true':'false'); bg.classList.toggle('open',open);}
+  if(bg){bg.addEventListener('click',function(){menu(mp.hidden);}); mp.addEventListener('click',function(e){if(e.target.closest('a'))menu(false);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll(null);menu(false);}});
+})();
+</script>
 <script>
 (function(){
   var car=document.getElementById('car'); if(!car) return;

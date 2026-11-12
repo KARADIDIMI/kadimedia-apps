@@ -18,36 +18,54 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="/daily-hydration/en/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
-  <nav><a class="hide-s" href="/daily-hydration/en/">App page</a><a class="hide-s" aria-current="page" href="/daily-hydration/privacy/">Privacy</a><a href="/contact/">Contact</a><a href="/daily-hydration/datenschutz/android/" hreflang="de">Deutsch</a></nav>
-</div></header>
-<main class="page">
-  <h1>Privacy Policy</h1>
-  <p class="sub">Daily Hydration for Android · Last updated: 28 August 2026</p>
-  <p class="lang"><a href="/daily-hydration/datenschutz/android/" hreflang="de">Deutsch</a></p>
-  <p class="platform">Looking for the <a href="/daily-hydration/privacy/ios/">iOS version</a>?</p>
-
-  <p>Your drink entries are stored exclusively on this device. There is currently no cloud sync between multiple devices, no server of our own, and no user account with us — we never have access to your data at any point. Your daily goal, display name, profile picture and other settings likewise remain local to this device.</p>
-  <p>To choose your profile picture, the app uses Android's built-in Photo Picker. It runs separately from the app and only gives it access to the picture you select, not your entire media library. No separate permission request is required for this.</p>
-  <p>If you enable Health Connect syncing, the app writes your logged drinks as water intake to Health Connect; with Premium active, also calories and caffeine content. Other fitness apps with access to Health Connect (e.g. Samsung Health, Google Fit) can then read this data. This feature is off by default. Separately, "Import drink history from Health Connect" lets you bring drink data already present in Health Connect into the app once — for that the app requests a distinct read permission and only reads data at that moment, never automatically in the background.</p>
-  <p>You can export your drink history as a CSV file at any time, e.g. to back it up or to import it into the iOS version of Daily Hydration, and likewise import a CSV file — including from other sources, as long as you match up the columns. Both use Android's built-in file/share picker; the file goes directly to the destination you choose, or is read directly from the location you choose, without passing through us.</p>
-  <p>If you set the daily goal to "Automatic", the app uses the age, weight, height and daily activity you enter solely for the calculation on this device. They are not transmitted. On request the app additionally obtains your approximate location via Location Services in order to determine the place name and current temperature. The place name is resolved using Android's on-device geocoding service, and the temperature comes from Open-Meteo, a free weather service that requires no account or sign-in; neither is stored permanently. Granting access is voluntary and can be revoked at any time in the Android settings; without it you can enter the temperature yourself or leave the field empty and have the calculation run without a temperature.</p>
-  <p>The graphical analytics (amount, calories, caffeine by day, week, month, and year) are calculated entirely on-device from your stored entries. Where available, the calorie and caffeine values stored per drink come from the Ciqual nutritional table published by ANSES (the French food safety agency) and from EUFIC (European Food Information Council); these are reference values for a typical preparation, not exact figures for every brand or recipe.</p>
-  <p>Reminders are local notifications: they are scheduled and delivered on the device, and no data is sent for them.</p>
-  <p>The Premium purchase is handled entirely through Google Play. All the app receives from Google Play is whether a valid entitlement exists – no payment details. We do not learn who bought anything.</p>
-  <p>No data is shared with third parties, no ads are shown, and no usage behavior is collected for analytics purposes.</p>
-  <p>Using "Delete All Data" in the account settings you can irreversibly remove all stored data from this device at any time — including display name and profile picture.</p>
-
-  </main>
+  <nav>
+    <a class="hide-s" href="/daily-hydration/en/#features">Features</a>
+    <a class="hide-s" href="/daily-hydration/en/#pricing">Pricing</a>
+    <div class="dd hide-s cur"><a class="ddlink" href="/daily-hydration/privacy/" aria-current="page">Privacy</a><button class="ddbtn" type="button" aria-label="Privacy – choose platform" aria-expanded="false" aria-haspopup="true">▾</button>
+      <div class="ddmenu"><div class="box"><a href="/daily-hydration/privacy/ios/">iOS (iPhone &amp; Apple Watch)</a><a href="/daily-hydration/privacy/android/" aria-current="page">Android</a></div></div></div>
+    <a class="hide-s" href="/contact/">Contact</a>
+    <div class="dd lang"><button class="ddbtn wide" type="button" aria-label="Choose language" aria-expanded="false" aria-haspopup="true"><span class="lt">Language – </span><b>EN</b> ▾</button>
+      <div class="ddmenu right"><div class="box"><a href="/daily-hydration/datenschutz/android/">Deutsch</a><a href="/daily-hydration/privacy/android/" aria-current="page">English</a></div></div></div>
+    <a class="pill" href="/daily-hydration/en/#get">Get the app</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="b1" d="M4 7h16M4 12h16M4 17h16"/><path class="b2" d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="mpanel" id="mnav" hidden><div class="wrap">
+    <a href="/daily-hydration/en/#features">Features</a>
+    <a href="/daily-hydration/en/#pricing">Pricing</a>
+    <a href="/daily-hydration/privacy/" aria-current="page">Privacy</a>
+    <a class="sub" href="/daily-hydration/privacy/ios/">iOS (iPhone &amp; Apple Watch)</a>
+    <a class="sub" href="/daily-hydration/privacy/android/" aria-current="page">Android</a>
+    <a href="/contact/">Contact</a>
+    <a class="pill" href="/daily-hydration/en/#get">Get the app</a>
+  </div></div></header>
+<section class="phero"><div class="wrap">
+  <p class="eyebrow">Privacy</p><h1>Privacy Policy</h1><p class="lead">Daily Hydration for Android · Last updated: 28 August 2026</p><div class="seg" role="tablist"><a href="/daily-hydration/privacy/ios/">iOS</a><a href="/daily-hydration/privacy/android/" class="on" aria-current="page">Android</a></div>
+</div></section>
+<main class="doc"><nav class="toc" aria-label="Contents"><strong>Contents</strong><ol><li><a href="#s1">Your data</a></li><li><a href="#s2">Profile picture</a></li><li><a href="#s3">Health Connect</a></li><li><a href="#s4">Export and import</a></li><li><a href="#s5">Daily goal, location and weather</a></li><li><a href="#s6">Analysis and nutritional values</a></li><li><a href="#s7">Reminders</a></li><li><a href="#s8">Premium purchase</a></li><li><a href="#s9">Sharing, ads and tracking</a></li><li><a href="#s10">Deleting your data</a></li></ol></nav><section class="sec" id="s1"><h2><span class="n">1.</span> Your data</h2><p>Your drink entries are stored exclusively on this device. There is currently no cloud sync between multiple devices, no server of our own, and no user account with us — we never have access to your data at any point. Your daily goal, display name, profile picture and other settings likewise remain local to this device.</p></section><section class="sec" id="s2"><h2><span class="n">2.</span> Profile picture</h2><p>To choose your profile picture, the app uses Android's built-in Photo Picker. It runs separately from the app and only gives it access to the picture you select, not your entire media library. No separate permission request is required for this.</p></section><section class="sec" id="s3"><h2><span class="n">3.</span> Health Connect</h2><p>If you enable Health Connect syncing, the app writes your logged drinks as water intake to Health Connect; with Premium active, also calories and caffeine content. Other fitness apps with access to Health Connect (e.g. Samsung Health, Google Fit) can then read this data. This feature is off by default. Separately, "Import drink history from Health Connect" lets you bring drink data already present in Health Connect into the app once — for that the app requests a distinct read permission and only reads data at that moment, never automatically in the background.</p></section><section class="sec" id="s4"><h2><span class="n">4.</span> Export and import</h2><p>You can export your drink history as a CSV file at any time, e.g. to back it up or to import it into the iOS version of Daily Hydration, and likewise import a CSV file — including from other sources, as long as you match up the columns. Both use Android's built-in file/share picker; the file goes directly to the destination you choose, or is read directly from the location you choose, without passing through us.</p></section><section class="sec" id="s5"><h2><span class="n">5.</span> Daily goal, location and weather</h2><p>If you set the daily goal to "Automatic", the app uses the age, weight, height and daily activity you enter solely for the calculation on this device. They are not transmitted. On request the app additionally obtains your approximate location via Location Services in order to determine the place name and current temperature. The place name is resolved using Android's on-device geocoding service, and the temperature comes from Open-Meteo, a free weather service that requires no account or sign-in; neither is stored permanently. Granting access is voluntary and can be revoked at any time in the Android settings; without it you can enter the temperature yourself or leave the field empty and have the calculation run without a temperature.</p></section><section class="sec" id="s6"><h2><span class="n">6.</span> Analysis and nutritional values</h2><p>The graphical analytics (amount, calories, caffeine by day, week, month, and year) are calculated entirely on-device from your stored entries. Where available, the calorie and caffeine values stored per drink come from the Ciqual nutritional table published by ANSES (the French food safety agency) and from EUFIC (European Food Information Council); these are reference values for a typical preparation, not exact figures for every brand or recipe.</p></section><section class="sec" id="s7"><h2><span class="n">7.</span> Reminders</h2><p>Reminders are local notifications: they are scheduled and delivered on the device, and no data is sent for them.</p></section><section class="sec" id="s8"><h2><span class="n">8.</span> Premium purchase</h2><p>The Premium purchase is handled entirely through Google Play. All the app receives from Google Play is whether a valid entitlement exists – no payment details. We do not learn who bought anything.</p></section><section class="sec" id="s9"><h2><span class="n">9.</span> Sharing, ads and tracking</h2><p>No data is shared with third parties, no ads are shown, and no usage behavior is collected for analytics purposes.</p></section><section class="sec" id="s10"><h2><span class="n">10.</span> Deleting your data</h2><p>Using "Delete All Data" in the account settings you can irreversibly remove all stored data from this device at any time — including display name and profile picture.</p></section></main>
 <footer class="site"><div class="wrap">
   <div class="links">
     <strong>Legal:</strong>
     <a href="/daily-hydration/privacy/ios/">Privacy (iOS)</a>
     <a href="/daily-hydration/privacy/android/">Privacy (Android)</a>
     <a href="/contact/">Contact</a>
-    <a href="/impressum/">Imprint</a>
+    <a href="/imprint/">Imprint</a>
   </div>
   <p>An app by Dimitrios Karadimos · KADIMEDIA</p>
   
 </div></footer>
+<script>
+(function(){
+  function closeAll(except){document.querySelectorAll('.dd.open').forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.ddbtn').setAttribute('aria-expanded','false');}});}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.ddbtn'), d=b?b.closest('.dd'):null; closeAll(d);
+    if(d){var o=d.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');}
+  });
+  var bg=document.querySelector('.burger'), mp=document.getElementById('mnav');
+  function menu(open){if(!bg||!mp)return; mp.hidden=!open; bg.setAttribute('aria-expanded',open?'true':'false'); bg.classList.toggle('open',open);}
+  if(bg){bg.addEventListener('click',function(){menu(mp.hidden);}); mp.addEventListener('click',function(e){if(e.target.closest('a'))menu(false);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll(null);menu(false);}});
+})();
+</script>
 </body>
 </html>

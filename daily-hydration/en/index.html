@@ -19,8 +19,27 @@
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="/daily-hydration/en/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
-  <nav><a class="hide-s" href="#features">Features</a><a class="hide-s" href="#pricing">Pricing</a><a class="hide-s" href="/daily-hydration/privacy/">Privacy</a><a class="hide-s" href="/contact/">Contact</a><a class="pill" href="#get">Get the app</a><a href="/daily-hydration/" hreflang="de">Deutsch</a></nav>
-</div></header>
+  <nav>
+    <a class="hide-s" href="/daily-hydration/en/#features">Features</a>
+    <a class="hide-s" href="/daily-hydration/en/#pricing">Pricing</a>
+    <div class="dd hide-s"><a class="ddlink" href="/daily-hydration/privacy/">Privacy</a><button class="ddbtn" type="button" aria-label="Privacy – choose platform" aria-expanded="false" aria-haspopup="true">▾</button>
+      <div class="ddmenu"><div class="box"><a href="/daily-hydration/privacy/ios/">iOS (iPhone &amp; Apple Watch)</a><a href="/daily-hydration/privacy/android/">Android</a></div></div></div>
+    <a class="hide-s" href="/contact/">Contact</a>
+    <div class="dd lang"><button class="ddbtn wide" type="button" aria-label="Choose language" aria-expanded="false" aria-haspopup="true"><span class="lt">Language – </span><b>EN</b> ▾</button>
+      <div class="ddmenu right"><div class="box"><a href="/daily-hydration/">Deutsch</a><a href="/daily-hydration/en/" aria-current="page">English</a></div></div></div>
+    <a class="pill" href="/daily-hydration/en/#get">Get the app</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="b1" d="M4 7h16M4 12h16M4 17h16"/><path class="b2" d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="mpanel" id="mnav" hidden><div class="wrap">
+    <a href="/daily-hydration/en/#features">Features</a>
+    <a href="/daily-hydration/en/#pricing">Pricing</a>
+    <a href="/daily-hydration/privacy/">Privacy</a>
+    <a class="sub" href="/daily-hydration/privacy/ios/">iOS (iPhone &amp; Apple Watch)</a>
+    <a class="sub" href="/daily-hydration/privacy/android/">Android</a>
+    <a href="/contact/">Contact</a>
+    <a class="pill" href="/daily-hydration/en/#get">Get the app</a>
+  </div></div></header>
 <main id="top">
   <div class="hero"><div class="wrap">
     <div><p class="eyebrow">For iPhone, Apple Watch & Android</p><h1>Track your drinks.<br>Reach your daily goal.</h1><p class="lead">Daily Hydration shows you at a glance how far along you are today. One tap per drink and a fill gauge that keeps you motivated – no account and no ads.</p>
@@ -77,11 +96,24 @@
     <a href="/daily-hydration/privacy/ios/">Privacy (iOS)</a>
     <a href="/daily-hydration/privacy/android/">Privacy (Android)</a>
     <a href="/contact/">Contact</a>
-    <a href="/impressum/">Imprint</a>
+    <a href="/imprint/">Imprint</a>
   </div>
   <p>An app by Dimitrios Karadimos · KADIMEDIA</p>
   <p>Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc. Google Play and Android are trademarks of Google LLC.</p>
 </div></footer>
+<script>
+(function(){
+  function closeAll(except){document.querySelectorAll('.dd.open').forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.ddbtn').setAttribute('aria-expanded','false');}});}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.ddbtn'), d=b?b.closest('.dd'):null; closeAll(d);
+    if(d){var o=d.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');}
+  });
+  var bg=document.querySelector('.burger'), mp=document.getElementById('mnav');
+  function menu(open){if(!bg||!mp)return; mp.hidden=!open; bg.setAttribute('aria-expanded',open?'true':'false'); bg.classList.toggle('open',open);}
+  if(bg){bg.addEventListener('click',function(){menu(mp.hidden);}); mp.addEventListener('click',function(e){if(e.target.closest('a'))menu(false);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll(null);menu(false);}});
+})();
+</script>
 <script>
 (function(){
   var car=document.getElementById('car'); if(!car) return;

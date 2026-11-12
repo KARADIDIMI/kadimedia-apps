@@ -17,10 +17,30 @@
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="brand" href="/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">KADIMEDIA</a>
-  <nav><a class="hide-s" href="/daily-hydration/">App-Seite</a><a class="hide-s" href="/daily-hydration/datenschutz/">Datenschutz</a><a aria-current="page" href="/kontakt/">Kontakt</a><a href="/contact/" hreflang="en">English</a></nav>
-</div></header>
-<main class="page"><h1>Kontakt</h1><p class="sub">Schreib uns, wir melden uns so schnell wie möglich. Wähle zuerst, worum es geht.</p>
+  <a class="brand" href="/daily-hydration/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
+  <nav>
+    <a class="hide-s" href="/daily-hydration/#features">Funktionen</a>
+    <a class="hide-s" href="/daily-hydration/#pricing">Preise</a>
+    <div class="dd hide-s"><a class="ddlink" href="/daily-hydration/datenschutz/">Datenschutz</a><button class="ddbtn" type="button" aria-label="Datenschutz – Auswahl" aria-expanded="false" aria-haspopup="true">▾</button>
+      <div class="ddmenu"><div class="box"><a href="/daily-hydration/datenschutz/ios/">iOS (iPhone &amp; Apple Watch)</a><a href="/daily-hydration/datenschutz/android/">Android</a></div></div></div>
+    <a class="hide-s" href="/kontakt/" aria-current="page">Kontakt</a>
+    <div class="dd lang"><button class="ddbtn wide" type="button" aria-label="Sprache wählen" aria-expanded="false" aria-haspopup="true"><span class="lt">Sprache – </span><b>DE</b> ▾</button>
+      <div class="ddmenu right"><div class="box"><a href="/kontakt/" aria-current="page">Deutsch</a><a href="/contact/">English</a></div></div></div>
+    <a class="pill" href="/daily-hydration/#get">Die App holen</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Menü" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="b1" d="M4 7h16M4 12h16M4 17h16"/><path class="b2" d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="mpanel" id="mnav" hidden><div class="wrap">
+    <a href="/daily-hydration/#features">Funktionen</a>
+    <a href="/daily-hydration/#pricing">Preise</a>
+    <a href="/daily-hydration/datenschutz/">Datenschutz</a>
+    <a class="sub" href="/daily-hydration/datenschutz/ios/">iOS (iPhone &amp; Apple Watch)</a>
+    <a class="sub" href="/daily-hydration/datenschutz/android/">Android</a>
+    <a href="/kontakt/" aria-current="page">Kontakt</a>
+    <a class="pill" href="/daily-hydration/#get">Die App holen</a>
+  </div></div></header>
+<section class="phero"><div class="wrap"><p class="eyebrow">Kontakt</p><h1>Kontakt</h1><p class="lead">Schreib uns, wir melden uns so schnell wie möglich. Wähle zuerst, worum es geht.</p></div></section>
+<main class="doc formcard">
   <form class="form" id="cf" novalidate>
     <fieldset><legend>Worum geht es?</legend><div class="catgrid"><input type="radio" id="cat-anfrage" name="cat" value="anfrage" required><label for="cat-anfrage">Anfrage<small>Allgemeine Fragen</small></label><input type="radio" id="cat-support" name="cat" value="support" required><label for="cat-support">Support<small>Hilfe bei Problemen</small></label><input type="radio" id="cat-feedback" name="cat" value="feedback" required><label for="cat-feedback">Feedback<small>Lob, Ideen, Wünsche</small></label></div></fieldset>
     <div id="rest" hidden>
@@ -64,6 +84,19 @@
   <p>Eine App von Dimitrios Karadimos · KADIMEDIA</p>
   
 </div></footer>
+<script>
+(function(){
+  function closeAll(except){document.querySelectorAll('.dd.open').forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.ddbtn').setAttribute('aria-expanded','false');}});}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.ddbtn'), d=b?b.closest('.dd'):null; closeAll(d);
+    if(d){var o=d.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');}
+  });
+  var bg=document.querySelector('.burger'), mp=document.getElementById('mnav');
+  function menu(open){if(!bg||!mp)return; mp.hidden=!open; bg.setAttribute('aria-expanded',open?'true':'false'); bg.classList.toggle('open',open);}
+  if(bg){bg.addEventListener('click',function(){menu(mp.hidden);}); mp.addEventListener('click',function(e){if(e.target.closest('a'))menu(false);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll(null);menu(false);}});
+})();
+</script>
 <script>window.CFG={"mail": "Info@kadimedia.com", "L": {"cat": "Worum geht es?", "app": "App", "sub": "Thema", "platform": "Plattform", "area": "Betroffener Bereich der App", "version": "App-Version", "device": "Gerät & Systemversion", "name": "Name", "email": "Deine E-Mail-Adresse", "msg": "Nachricht", "opt": "(optional)", "choose": "Bitte wählen", "ver_ph": "z. B. 0.6.8", "dev_ph": "z. B. Pixel 8, Android 15", "msg_ph": "Beschreibe dein Anliegen. Bei Problemen: Was hast du gemacht, was ist passiert, was hast du erwartet?", "submit": "E-Mail vorbereiten", "result": "Deine Nachricht ist bereit", "result_hint": "Wenn sich dein Mailprogramm nicht öffnet, kopiere den Text und sende ihn an", "open": "In Mailprogramm öffnen", "copy": "Text kopieren", "copied": "Kopiert", "subject_pre": "Kontakt", "k_cat": "Kategorie", "k_app": "App", "k_platform": "Plattform", "k_area": "Bereich", "k_version": "App-Version", "k_device": "Gerät/System", "k_name": "Name", "k_email": "E-Mail", "k_msg": "Nachricht"}, "cats": [["anfrage", "Anfrage", "Allgemeine Fragen"], ["support", "Support", "Hilfe bei Problemen"], ["feedback", "Feedback", "Lob, Ideen, Wünsche"]], "subs": {"anfrage": [["allgemein", "Allgemeine Frage"], ["kooperation", "Zusammenarbeit, Presse & Business"], ["sonstiges", "Sonstiges"]], "support": [["tech", "Technisches Problem"], ["premium", "Premium & Kauf"], ["daten", "Datenschutz & Datenlöschung"], ["sonstiges", "Sonstiges"]], "feedback": [["lob", "Lob"], ["idee", "Verbesserungsvorschlag"], ["feature", "Funktionswunsch"], ["sonstiges", "Sonstiges"]]}, "apps": [["Daily Hydration", "Daily Hydration"], ["Allgemein", "Allgemein / andere App"]], "platforms": ["iPhone (iOS)", "Apple Watch", "Android-Handy", "Wear OS (Android-Uhr)", "Weiß ich nicht"], "areas": ["Startbildschirm & Füllanzeige", "Getränk hinzufügen & Menge", "Alle Getränke & eigene Getränke", "Nachtragen", "Kalender & Verlauf", "Auswertung", "Konto & Einstellungen", "Tagesziel (manuell / automatisch)", "Erinnerungen", "Widgets", "Smartwatch", "Health-Anbindung (Apple Health / Health Connect)", "Export & Import (CSV)", "Premium & Kauf", "Hilfe & Datenschutz", "Sonstiges / weiß ich nicht"]};</script>
 <script>
 (function(){

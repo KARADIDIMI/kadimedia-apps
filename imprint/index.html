@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imprint – KADIMEDIA</title>
+<meta name="description" content="Imprint – KADIMEDIA / Dimitrios Karadimos">
+<link rel="canonical" href="https://app.kadimedia.com/imprint/">
+<link rel="alternate" hreflang="de" href="https://app.kadimedia.com/impressum/">
+<link rel="alternate" hreflang="en" href="https://app.kadimedia.com/imprint/">
+<link rel="icon" type="image/png" href="/daily-hydration/assets/icon.png">
+<link rel="apple-touch-icon" href="/daily-hydration/assets/icon.png">
+<meta property="og:title" content="Imprint – KADIMEDIA">
+<meta property="og:description" content="Imprint – KADIMEDIA / Dimitrios Karadimos">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/daily-hydration/en/"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
+  <nav>
+    <a class="hide-s" href="/daily-hydration/en/#features">Features</a>
+    <a class="hide-s" href="/daily-hydration/en/#pricing">Pricing</a>
+    <div class="dd hide-s"><a class="ddlink" href="/daily-hydration/privacy/">Privacy</a><button class="ddbtn" type="button" aria-label="Privacy – choose platform" aria-expanded="false" aria-haspopup="true">▾</button>
+      <div class="ddmenu"><div class="box"><a href="/daily-hydration/privacy/ios/">iOS (iPhone &amp; Apple Watch)</a><a href="/daily-hydration/privacy/android/">Android</a></div></div></div>
+    <a class="hide-s" href="/contact/">Contact</a>
+    <div class="dd lang"><button class="ddbtn wide" type="button" aria-label="Choose language" aria-expanded="false" aria-haspopup="true"><span class="lt">Language – </span><b>EN</b> ▾</button>
+      <div class="ddmenu right"><div class="box"><a href="/impressum/">Deutsch</a><a href="/imprint/" aria-current="page">English</a></div></div></div>
+    <a class="pill" href="/daily-hydration/en/#get">Get the app</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="b1" d="M4 7h16M4 12h16M4 17h16"/><path class="b2" d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+<div class="mpanel" id="mnav" hidden><div class="wrap">
+    <a href="/daily-hydration/en/#features">Features</a>
+    <a href="/daily-hydration/en/#pricing">Pricing</a>
+    <a href="/daily-hydration/privacy/">Privacy</a>
+    <a class="sub" href="/daily-hydration/privacy/ios/">iOS (iPhone &amp; Apple Watch)</a>
+    <a class="sub" href="/daily-hydration/privacy/android/">Android</a>
+    <a href="/contact/">Contact</a>
+    <a class="pill" href="/daily-hydration/en/#get">Get the app</a>
+  </div></div></header>
+<section class="phero"><div class="wrap"><p class="eyebrow">Imprint</p><h1>Imprint</h1><p class="lead">Legal notice · Provider information according to § 5 DDG (German Digital Services Act)</p></div></section>
+<main class="doc"><section class="sec"><h2>Provider information according to § 5 DDG</h2>
+  <address>Dimitrios Karadimos<br>Leipziger Straße 20<br>75417 Mühlacker<br>Germany</address>
+  <dl><dt>Legal form</dt><dd>Sole proprietorship</dd>
+  <dt>Contact</dt><dd><a href="mailto:Info@kadimedia.com">Info@kadimedia.com</a></dd>
+  <dt>VAT identification number pursuant to § 27a UStG</dt><dd>DE460243099</dd></dl></section></main>
+<footer class="site"><div class="wrap">
+  <div class="links">
+    <strong>Legal:</strong>
+    <a href="/daily-hydration/privacy/ios/">Privacy (iOS)</a>
+    <a href="/daily-hydration/privacy/android/">Privacy (Android)</a>
+    <a href="/contact/">Contact</a>
+    <a href="/imprint/">Imprint</a>
+  </div>
+  <p>An app by Dimitrios Karadimos · KADIMEDIA</p>
+  
+</div></footer>
+<script>
+(function(){
+  function closeAll(except){document.querySelectorAll('.dd.open').forEach(function(d){if(d!==except){d.classList.remove('open');d.querySelector('.ddbtn').setAttribute('aria-expanded','false');}});}
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.ddbtn'), d=b?b.closest('.dd'):null; closeAll(d);
+    if(d){var o=d.classList.toggle('open'); b.setAttribute('aria-expanded',o?'true':'false');}
+  });
+  var bg=document.querySelector('.burger'), mp=document.getElementById('mnav');
+  function menu(open){if(!bg||!mp)return; mp.hidden=!open; bg.setAttribute('aria-expanded',open?'true':'false'); bg.classList.toggle('open',open);}
+  if(bg){bg.addEventListener('click',function(){menu(mp.hidden);}); mp.addEventListener('click',function(e){if(e.target.closest('a'))menu(false);});}
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAll(null);menu(false);}});
+})();
+</script>
+</body>
+</html>
