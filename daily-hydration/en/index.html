@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Hydration – Track your drinks. Reach your daily goal.</title>
+<meta name="description" content="Daily Hydration is the simple drinking tracker for iPhone, Apple Watch and Android: log drinks with one tap and keep your daily goal in view. No account, no ads.">
+<link rel="canonical" href="https://app.kadimedia.com/daily-hydration/en/">
+<link rel="alternate" hreflang="de" href="https://app.kadimedia.com/daily-hydration/">
+<link rel="alternate" hreflang="en" href="https://app.kadimedia.com/daily-hydration/en/">
+<link rel="icon" type="image/png" href="/daily-hydration/assets/icon.png">
+<link rel="apple-touch-icon" href="/daily-hydration/assets/icon.png">
+<meta property="og:title" content="Daily Hydration">
+<meta property="og:description" content="Daily Hydration is the simple drinking tracker for iPhone, Apple Watch and Android: log drinks with one tap and keep your daily goal in view. No account, no ads.">
+<meta property="og:image" content="https://app.kadimedia.com/daily-hydration/assets/banner-en.jpg">
+<meta property="og:type" content="website">
+<style>
+  :root { color-scheme: light dark; --blue:#0a7cff; --blue-d:#0050c0; --ink:#14181f; --muted:#5b6472; --bg:#fff; --soft:#f2f6fc; --line:#e3e8f0; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#eef2f8; --muted:#9aa5b5; --bg:#0e1116; --soft:#161b23; --line:#262d38; } }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+  img { max-width:100%; height:auto; display:block; }
+  a { color:var(--blue); }
+  .wrap { max-width:68rem; margin:0 auto; padding:0 1.25rem; }
+  header.top { position:sticky; top:0; z-index:5; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  header.top .wrap { display:flex; align-items:center; gap:1rem; height:3.5rem; }
+  .brand { display:flex; align-items:center; gap:.6rem; font-weight:700; color:var(--ink); text-decoration:none; }
+  .brand img { width:30px; height:30px; border-radius:8px; }
+  nav { margin-left:auto; display:flex; align-items:center; gap:1.1rem; font-size:.95rem; }
+  nav a { color:var(--muted); text-decoration:none; }
+  nav a:hover { color:var(--ink); }
+  nav .pill { color:#fff; background:var(--blue); padding:.35rem .9rem; border-radius:999px; font-weight:600; }
+  nav .pill:hover { color:#fff; background:var(--blue-d); }
+  @media (max-width:40rem) { nav a.hide-s { display:none; } }
+
+  .hero { background:linear-gradient(160deg,#0a84ff 0%,#0050c0 100%); color:#fff; overflow:hidden; }
+  .hero .wrap { display:grid; grid-template-columns:1.05fr 1fr; gap:2rem; align-items:center; padding-top:3.5rem; padding-bottom:3.5rem; }
+  .eyebrow { display:inline-block; font-size:.85rem; font-weight:600; letter-spacing:.02em; background:rgba(255,255,255,.16); padding:.3rem .8rem; border-radius:999px; margin:0 0 1.1rem; }
+  .hero h1 { font-size:clamp(2.2rem,5.2vw,3.5rem); line-height:1.08; margin:0 0 1rem; letter-spacing:-.02em; }
+  .hero p.lead { font-size:1.12rem; max-width:34rem; margin:0 0 1.5rem; opacity:.95; }
+  .chips { display:flex; flex-wrap:wrap; gap:.5rem; margin:0 0 1.75rem; }
+  .chips span { font-size:.85rem; border:1px solid rgba(255,255,255,.45); padding:.25rem .75rem; border-radius:999px; }
+  .stores { display:flex; flex-wrap:wrap; gap:.75rem; }
+  .store { display:inline-flex; align-items:center; gap:.65rem; background:#000; color:#fff; border:1px solid rgba(255,255,255,.35); border-radius:.8rem; padding:.55rem 1.1rem .55rem .9rem; line-height:1.15; cursor:default; opacity:.92; }
+  .store small { display:block; font-size:.7rem; opacity:.8; }
+  .store b { font-size:1.1rem; font-weight:600; }
+  .hero .art img { border-radius:1.25rem; box-shadow:0 24px 60px rgba(0,20,70,.45); }
+  @media (max-width:52rem) { .hero .wrap { grid-template-columns:1fr; padding-top:2.25rem; } }
+
+  .intro { text-align:center; padding:4.5rem 0 1rem; }
+  .intro h2 { font-size:clamp(1.7rem,3.6vw,2.3rem); margin:0 0 .6rem; letter-spacing:-.01em; }
+  .intro p { max-width:40rem; margin:0 auto; color:var(--muted); font-size:1.08rem; }
+
+  .feature { display:grid; grid-template-columns:1fr 1.1fr; gap:3rem; align-items:center; padding:3rem 0; }
+  .feature.flip .shot { order:2; }
+  .shot { justify-self:center; width:min(100%,20rem); }
+  .shot img { border-radius:1.4rem; box-shadow:0 18px 44px rgba(10,60,140,.28); }
+  .kicker { color:var(--blue); font-weight:600; margin:0 0 .4rem; }
+  .feature h3 { font-size:clamp(1.5rem,3.2vw,2rem); line-height:1.2; margin:0 0 .8rem; letter-spacing:-.01em; }
+  .feature p { margin:0 0 1rem; color:var(--muted); font-size:1.05rem; }
+  .feature ul { margin:0; padding:0; list-style:none; }
+  .feature li { position:relative; padding:.3rem 0 .3rem 1.7rem; }
+  .feature li::before { content:""; position:absolute; left:0; top:.72rem; width:.9rem; height:.9rem; border-radius:50%; background:var(--blue); box-shadow:inset 0 0 0 .22rem var(--bg); outline:2px solid var(--blue); }
+  @media (max-width:52rem) { .feature { grid-template-columns:1fr; gap:1.5rem; padding:2rem 0; } .feature.flip .shot { order:0; } }
+
+  .more { background:var(--soft); padding:3.5rem 0; margin-top:2rem; }
+  .more h2 { text-align:center; margin:0 0 1.75rem; font-size:1.7rem; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:1rem; }
+  .card { background:var(--bg); border:1px solid var(--line); border-radius:1rem; padding:1.25rem; }
+  .card h4 { margin:0 0 .35rem; font-size:1.05rem; }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+
+  .cta { background:linear-gradient(160deg,#0a84ff 0%,#0050c0 100%); color:#fff; text-align:center; padding:4rem 0; }
+  .cta h2 { font-size:clamp(1.7rem,3.8vw,2.4rem); margin:0 0 .7rem; }
+  .cta p { max-width:36rem; margin:0 auto 1.6rem; opacity:.95; }
+  .cta .stores { justify-content:center; }
+  .cta .note { font-size:.9rem; opacity:.85; margin:1.5rem auto 0; }
+
+  footer { padding:2.25rem 0 3rem; color:var(--muted); font-size:.9rem; }
+  footer .links { display:flex; flex-wrap:wrap; gap:.4rem 1.25rem; margin:0 0 1rem; }
+  footer p { margin:.25rem 0; }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top"><img src="/daily-hydration/assets/icon.png" alt="" width="30" height="30">Daily Hydration</a>
+  <nav>
+    <a class="hide-s" href="#features">Features</a>
+    <a class="hide-s" href="/daily-hydration/privacy/">Privacy</a>
+    <a href="/daily-hydration/" hreflang="de">Deutsch</a>
+    <a class="pill" href="#get">Get the app</a>
+  </nav>
+</div></header>
+
+<main id="top">
+  <div class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">For iPhone, Apple Watch & Android</p>
+      <h1>Track your drinks.<br>Reach your daily goal.</h1>
+      <p class="lead">Daily Hydration shows you at a glance how far along you are today. One tap per drink and a fill gauge that keeps you motivated – no account and no ads.</p>
+      <div class="chips"><span>No account</span><span>No ads</span><span>Your data stays with you</span></div>
+      <div class="stores">
+        <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.63 1.1 8.8.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.1c.6-.74 1.01-1.75.9-2.77-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.69.97.07 1.96-.49 2.57-1.23z"/></svg><span><small>Coming soon to the</small><b>App Store</b></span></span>
+        <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M4.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1 9.2-9.2v-.2L4.7 2.3l-.1.1zm12.3 6.4l-3 3 3 3 3.6-2.1c1-.6 1-1.5 0-2.1l-3.6-1.8zM14 12.2l-9.3 9.3c.3.3.9.4 1.5 0l10.9-6.2-3.1-3.1zM14 11.8l3.1-3.1L6.2 2.5c-.6-.4-1.2-.3-1.5 0l9.3 9.3z"/></svg><span><small>Coming soon to</small><b>Google Play</b></span></span>
+      </div>
+    </div>
+    <div class="art"><img src="/daily-hydration/assets/banner-en.jpg" alt="Daily Hydration: Track your drinks. Reach your daily goal." width="1024" height="500"></div>
+  </div></div>
+
+  <div class="wrap" id="features">
+    <div class="intro"><h2>Everything you need to stay hydrated</h2><p>Daily Hydration is deliberately simple – yet it offers enough to really understand your drinking habits.</p></div>
+    
+    <section class="feature">
+      <div class="shot"><img src="/daily-hydration/assets/shot-en-01.jpg" alt="Your day at a glance" loading="lazy" width="360" height="640"></div>
+      <div class="copy">
+        <p class="kicker">The fill gauge shows you right away how far along you are today.</p>
+        <h3>Your day at a glance</h3>
+        <p>A pitcher fills up with every drink. You see immediately how much you have had and how much is left to your daily goal. Set the goal yourself or let the app calculate it from age, weight, activity and temperature.</p>
+        <ul><li>Fill gauge with progress in millilitres and percent</li><li>Daily goal set manually or automatically</li><li>Reminders that gently nudge you to drink</li></ul>
+      </div>
+    </section>
+    <section class="feature flip">
+      <div class="shot"><img src="/daily-hydration/assets/shot-en-02.jpg" alt="Log drinks in seconds" loading="lazy" width="360" height="640"></div>
+      <div class="copy">
+        <p class="kicker">One tap for water, coffee, tea and more – custom drinks too.</p>
+        <h3>Log drinks in seconds</h3>
+        <p>Pick the amount, tap your drink – done. A short notice confirms the entry, and one tap undoes it if you tapped by mistake. Forgot something? Add it afterwards.</p>
+        <ul><li>Water, coffee, tea, juice, soft drink, lemonade, soup & broth and more</li><li>Create your own drinks with your own values</li><li>Add entries retroactively</li></ul>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="shot"><img src="/daily-hydration/assets/shot-en-03.jpg" alt="Containers to your taste" loading="lazy" width="360" height="640"></div>
+      <div class="copy">
+        <p class="kicker">Pitcher, glass, bottle or pixel emoji.</p>
+        <h3>Containers to your taste</h3>
+        <p>Give your day a face: the container on the home screen can be switched – from the classic glass to a pixel smiley whose expression changes with your progress.</p>
+        <ul><li>Pitcher, drinking glass, PET bottles and pixel emoji</li><li>Some designs are part of Premium</li></ul>
+      </div>
+    </section>
+    <section class="feature flip">
+      <div class="shot"><img src="/daily-hydration/assets/shot-en-04.jpg" alt="Understand your drinking habits" loading="lazy" width="360" height="640"></div>
+      <div class="copy">
+        <p class="kicker">Analysis by week and month – with calories and caffeine.</p>
+        <h3>Understand your drinking habits</h3>
+        <p>The analysis shows what and how much you drink – by day, week, month and year – and how water, tea, coffee and the rest contribute to your calories and caffeine.</p>
+        <ul><li>Volume, calories and caffeine over time</li><li>Share of each drink type at a glance</li><li>Extended analysis with Premium</li></ul>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="shot"><img src="/daily-hydration/assets/shot-en-05.jpg" alt="Your data belongs to you" loading="lazy" width="360" height="640"></div>
+      <div class="copy">
+        <p class="kicker">Export and import as CSV, optional health integration. No account, no ads.</p>
+        <h3>Your data belongs to you</h3>
+        <p>Your entries live on your device. Back them up as a CSV file, import them or delete everything at any time. If you like, the app exchanges data with Apple Health or Health Connect.</p>
+        <ul><li>No user account, no ads, no tracking</li><li>CSV export and import, also between iPhone and Android</li><li>Delete all data at any time</li></ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="more"><div class="wrap">
+    <h2>And also</h2>
+    <div class="cards"><div class="card"><h4>Widgets</h4><p>Keep your daily goal in view right on the home screen.</p></div><div class="card"><h4>Apple Watch</h4><p>Log drinks right from your wrist (iPhone version).</p></div><div class="card"><h4>Light & dark</h4><p>Follows the appearance of your device.</p></div><div class="card"><h4>English & German</h4><p>The app speaks both languages.</p></div></div>
+  </div></div>
+
+  <div class="cta" id="get"><div class="wrap">
+    <h2>Stay hydrated – every day</h2>
+    <p>Daily Hydration is coming to iPhone and Android. As soon as the app is available in the stores, the links will appear here.</p>
+    <div class="stores">
+        <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.02-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.63 1.1 8.8.73 1.06 1.6 2.25 2.74 2.21 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.15.84-1.23 1.19-2.42 1.2-2.48-.03-.01-2.3-.88-2.32-3.5zM14.2 6.1c.6-.74 1.01-1.75.9-2.77-.87.04-1.93.58-2.55 1.31-.56.65-1.05 1.69-.92 2.69.97.07 1.96-.49 2.57-1.23z"/></svg><span><small>Coming soon to the</small><b>App Store</b></span></span>
+        <span class="store" aria-disabled="true"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M4.6 2.4c-.3.3-.5.8-.5 1.4v16.4c0 .6.2 1.1.5 1.4l.1.1 9.2-9.2v-.2L4.7 2.3l-.1.1zm12.3 6.4l-3 3 3 3 3.6-2.1c1-.6 1-1.5 0-2.1l-3.6-1.8zM14 12.2l-9.3 9.3c.3.3.9.4 1.5 0l10.9-6.2-3.1-3.1zM14 11.8l3.1-3.1L6.2 2.5c-.6-.4-1.2-.3-1.5 0l9.3 9.3z"/></svg><span><small>Coming soon to</small><b>Google Play</b></span></span>
+      </div>
+    <p class="note">The core features are free. Some container designs and extended analysis come with Premium.</p>
+  </div></div>
+</main>
+
+<footer><div class="wrap">
+  <div class="links">
+    <strong>Legal:</strong>
+    <a href="/daily-hydration/privacy/ios/">Privacy (iOS)</a>
+    <a href="/daily-hydration/privacy/android/">Privacy (Android)</a>
+    <a href="/impressum/">Imprint</a>
+  </div>
+  <p>An app by Dimitrios Karadimos · KADIMEDIA</p>
+  <p>Apple, iPhone, Apple Watch and App Store are trademarks of Apple Inc. Google Play and Android are trademarks of Google LLC.</p>
+</div></footer>
+</body>
+</html>
