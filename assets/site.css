@@ -426,3 +426,9 @@ nav { flex-wrap:nowrap; }
   .pxbig { width:min(60%,9rem); }
   .emoleft > .readout { text-align:center; margin:0 0 .4rem; }
 }
+
+/* header controls: equal size, evenly spaced */
+.theme, .burger { width:2.5rem; height:2.5rem; box-sizing:border-box; border-radius:.7rem; margin:0; }
+.ddbtn.wide { height:2.5rem; box-sizing:border-box; border-radius:.7rem; }
+@media (max-width:64rem) { nav { gap:.5rem; } header.top .wrap { gap:.5rem; } .burger { margin-left:0; } }
+.theme svg, .burger svg { width:22px; height:22px; }
