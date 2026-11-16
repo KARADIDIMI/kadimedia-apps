@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://app.kadimedia.com/daily-hydration/assets/banner.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
-<link rel="stylesheet" href="/assets/site.css?v=c48b5fc5">
+<link rel="stylesheet" href="/assets/site.css?v=031f9c2d">
 </head>
 <body>
 <a class="skip" href="#content">Zum Inhalt springen</a>
@@ -103,11 +103,47 @@
     if(en.timing) meta.appendChild(el('span','tm',tr(en.timing)));
     r.appendChild(meta); return r;
   }
+  function listOf(list,plat){return list.filter(function(e){return (e.platforms||[]).indexOf(plat)>-1&&catMatch(e.category);});}
+  function rowsNode(items,showPlat){var ul=el('ul','rows'); items.forEach(function(e){ul.appendChild(entryRow(e,showPlat));}); return ul;}
   function block(title,list){
+    if(state.plat==='both'){
+      var li=listOf(list,'ios'), la=listOf(list,'android'); if(!li.length&&!la.length) return null;
+      var s=el('section','rsec'); s.appendChild(el('h2',null,title));
+      s.appendChild(cols([['ios',li.length?rowsNode(li,false):null],['android',la.length?rowsNode(la,false):null]])); return s;
+    }
     var items=list.filter(function(e){return platMatch(e.platforms)&&catMatch(e.category);});
     if(!items.length) return null;
-    var s=el('section','rsec'); s.appendChild(el('h2',null,title));
-    var ul=el('ul','rows'); items.forEach(function(e){ul.appendChild(entryRow(e,true));}); s.appendChild(ul); return s;
+    var s2=el('section','rsec'); s2.appendChild(el('h2',null,title)); s2.appendChild(rowsNode(items,true)); return s2;
+  }
+  function cols(parts){
+    var g=el('div','rcols');
+    parts.forEach(function(x){var c=el('div','rcol'); c.appendChild(el('div','rch',null)); c.firstChild.appendChild(pbadge(x[0]));
+      if(x[1]) c.appendChild(x[1]); else c.appendChild(el('p','rempty','–')); g.appendChild(c);});
+    return g;
+  }
+  var MONTHS={de:['januar','februar','märz','april','mai','juni','juli','august','september','oktober','november','dezember'],en:['january','february','march','april','may','june','july','august','september','october','november','december']};
+  function dateKey(r){
+    var t=tr(r.date)||'', m=t.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+    if(m) return new Date(+m[3],+m[2]-1,+m[1]).getTime();
+    var w=t.toLowerCase().split(/\s+/), y=+w[w.length-1]; if(!y) return 0;
+    var i=MONTHS.de.indexOf(w[0]); if(i<0) i=MONTHS.en.indexOf(w[0]); if(i<0) return new Date(y,0,1).getTime();
+    return new Date(y,i+1,0).getTime();
+  }
+  function verKey(r){return (tr(r.version).match(/\d+/g)||[]).map(Number);}
+  function newer(a,b){
+    var d=dateKey(b)-dateKey(a); if(d) return d;
+    var x=verKey(a), y=verKey(b); for(var i=0;i<Math.max(x.length,y.length);i++){var k=(y[i]||0)-(x[i]||0); if(k) return k;} return 0;
+  }
+  function relCard(r,es){
+    var c=el('article','vcard'); var top=el('div','vtop');
+    top.appendChild(el('h3',null,tr(r.version)));
+    var m=el('span','meta'); m.appendChild(pbadge(r.platform)); m.appendChild(el('span','st '+r.status,C.rel[r.status])); top.appendChild(m);
+    c.appendChild(top); if(r.date) c.appendChild(el('p','vdate',tr(r.date)));
+    c.appendChild(rowsNode(es,false)); return c;
+  }
+  function relCards(plat){
+    var out=[]; (data.releases||[]).filter(function(r){return r.platform===plat;}).sort(newer).forEach(function(r){
+      var es=(r.entries||[]).filter(function(e){return catMatch(e.category);}); if(es.length) out.push(relCard(r,es));}); return out;
   }
   function render(){
     root.textContent='';
@@ -124,17 +160,17 @@
     if(data.updated){root.appendChild(el('p','rupd',C.updated+': '+data.updated.split('-').reverse().join('.')));}
     var any=false;
     var nx=block(C.next,data.next||[]); if(nx){root.appendChild(nx); any=true;}
-    var rels=(data.releases||[]).filter(function(r){return state.plat==='both'||r.platform===state.plat;});
-    var cards=[];
-    rels.forEach(function(r){
-      var es=(r.entries||[]).filter(function(e){return catMatch(e.category);}); if(!es.length) return;
-      var c=el('article','vcard'); var top=el('div','vtop');
-      var h=el('h3',null,tr(r.version)); top.appendChild(h);
-      var m=el('span','meta'); m.appendChild(pbadge(r.platform)); m.appendChild(el('span','st '+r.status,C.rel[r.status])); top.appendChild(m);
-      c.appendChild(top); if(r.date) c.appendChild(el('p','vdate',tr(r.date)));
-      var ul=el('ul','rows'); es.forEach(function(e){ul.appendChild(entryRow(e,false));}); c.appendChild(ul); cards.push(c);
-    });
-    if(cards.length){var s=el('section','rsec'); s.appendChild(el('h2',null,C.versions)); var g=el('div','vgrid'); cards.forEach(function(c){g.appendChild(c);}); s.appendChild(g); root.appendChild(s); any=true;}
+    if(state.plat==='both'){
+      var ci=relCards('ios'), ca=relCards('android');
+      if(ci.length||ca.length){
+        var sec=el('section','rsec'); sec.appendChild(el('h2',null,C.versions));
+        function stack(cs){if(!cs.length) return null; var d=el('div','vstack'); cs.forEach(function(c){d.appendChild(c);}); return d;}
+        sec.appendChild(cols([['ios',stack(ci)],['android',stack(ca)]])); root.appendChild(sec); any=true;
+      }
+    } else {
+      var cards=relCards(state.plat);
+      if(cards.length){var s=el('section','rsec'); s.appendChild(el('h2',null,C.versions)); var g=el('div','vgrid'); cards.forEach(function(c){g.appendChild(c);}); s.appendChild(g); root.appendChild(s); any=true;}
+    }
     var lt=block(C.later,data.later||[]); if(lt){root.appendChild(lt); any=true;}
     if(!any) root.appendChild(el('p','rnone',C.none));
   }

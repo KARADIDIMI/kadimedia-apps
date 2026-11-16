@@ -1,431 +1,466 @@
 {
- "schemaVersion": 3,
- "updated": "2026-11-16",
- "intro": {
-  "de": "Woran wir arbeiten und was als Nächstes kommt. Die Einträge sind ein Ausblick und keine Zusage.",
-  "en": "What we are working on and what comes next. The entries are an outlook, not a promise."
- },
- "next": [
-  {
-   "title": {
-    "de": "Google-Drive-Abgleich zwischen Android-Geräten",
-    "en": "Google Drive sync between Android devices"
-   },
-   "category": "new",
-   "status": "inProgress",
-   "platforms": [
-    "android"
-   ]
+  "schemaVersion": 3,
+  "updated": "2026-11-16",
+  "intro": {
+    "de": "Woran wir arbeiten und was als Nächstes kommt. Die Einträge sind ein Ausblick und keine Zusage.",
+    "en": "What we are working on and what comes next. The entries are an outlook, not a promise."
   },
-  {
-   "title": {
-    "de": "Wear-OS-App: Kopplung mit dem Handy",
-    "en": "Wear OS app: pairing with the phone"
-   },
-   "category": "new",
-   "status": "inProgress",
-   "platforms": [
-    "android"
-   ]
-  },
-  {
-   "title": {
-    "de": "iCloud-Abgleich",
-    "en": "iCloud sync"
-   },
-   "category": "fixed",
-   "status": "inProgress",
-   "platforms": [
-    "ios"
-   ],
-   "timing": {
-    "de": "0.7 Build 6",
-    "en": "0.7 build 6"
-   }
-  },
-  {
-   "title": {
-    "de": "Kauf-Funktion testen",
-    "en": "Test the purchase flow"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "0.7 Build 6",
-    "en": "0.7 build 6"
-   }
-  },
-  {
-   "title": {
-    "de": "Weitere Behälter-Designs",
-    "en": "More container designs"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "0.7 Build 6",
-    "en": "0.7 build 6"
-   }
-  },
-  {
-   "title": {
-    "de": "Weitere Watch-Designs",
-    "en": "More Watch designs"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios"
-   ],
-   "timing": {
-    "de": "0.7 Build 6",
-    "en": "0.7 build 6"
-   }
-  },
-  {
-   "title": {
-    "de": "Trinkhistorie importieren",
-    "en": "Import drink history"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios"
-   ],
-   "timing": {
-    "de": "0.7 Build 7",
-    "en": "0.7 build 7"
-   }
-  },
-  {
-   "title": {
-    "de": "Widgets zeigen den Behälter der Startseite",
-    "en": "Widgets show the container from the home screen"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "offen",
-    "en": "open"
-   }
-  }
- ],
- "releases": [
-  {
-   "platform": "ios",
-   "version": {
-    "de": "0.7 Build 6",
-    "en": "0.7 build 6"
-   },
-   "date": {
-    "de": "November 2026",
-    "en": "November 2026"
-   },
-   "status": "inProgress",
-   "entries": [
+  "next": [
     {
-     "title": {
-      "de": "Eigene Getränke anlegen",
-      "en": "Create your own drinks"
-     },
-     "category": "new"
+      "title": {
+        "de": "Google-Drive-Abgleich zwischen Android-Geräten",
+        "en": "Google Drive sync between Android devices"
+      },
+      "category": "new",
+      "status": "inProgress",
+      "platforms": [
+        "android"
+      ]
     },
     {
-     "title": {
-      "de": "Homescreen-Widgets mit Schnellzugriff-Buttons und vier Designs (Premium)",
-      "en": "Home screen widgets with quick-add buttons and four designs (Premium)"
-     },
-     "category": "new"
+      "title": {
+        "de": "Wear-OS-App: Kopplung mit dem Handy",
+        "en": "Wear OS app: pairing with the phone"
+      },
+      "category": "new",
+      "status": "inProgress",
+      "platforms": [
+        "android"
+      ]
     },
     {
-     "title": {
-      "de": "Neue Getränkegruppe Suppe und Brühe mit vier Suppen",
-      "en": "New drink group soup and broth with four soups"
-     },
-     "category": "new"
+      "title": {
+        "de": "iCloud-Abgleich",
+        "en": "iCloud sync"
+      },
+      "category": "fixed",
+      "status": "inProgress",
+      "platforms": [
+        "ios"
+      ],
+      "timing": {
+        "de": "0.7 Build 6",
+        "en": "0.7 build 6"
+      }
     },
     {
-     "title": {
-      "de": "Erinnerungen mit zehn abwechselnden Texten",
-      "en": "Reminders with ten alternating texts"
-     },
-     "category": "new"
+      "title": {
+        "de": "Kauf-Funktion testen",
+        "en": "Test the purchase flow"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "0.7 Build 6",
+        "en": "0.7 build 6"
+      }
     },
     {
-     "title": {
-      "de": "Hilfe: neuer Artikel zu Widgets, Konto-Artikel aktualisiert",
-      "en": "Help: new article on widgets, account article updated"
-     },
-     "category": "changed"
+      "title": {
+        "de": "Weitere Behälter-Designs",
+        "en": "More container designs"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "0.7 Build 6",
+        "en": "0.7 build 6"
+      }
     },
     {
-     "title": {
-      "de": "Bestätigung beim Hinzufügen eines Getränks mit Rückgängig und Vibrieren",
-      "en": "Confirmation when adding a drink, with undo and haptic feedback"
-     },
-     "category": "qol"
+      "title": {
+        "de": "Weitere Watch-Designs",
+        "en": "More Watch designs"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios"
+      ],
+      "timing": {
+        "de": "0.7 Build 6",
+        "en": "0.7 build 6"
+      }
     },
     {
-     "title": {
-      "de": "Profilbild zuschneiden und zoomen, Ladebildschirm mit App-Icon",
-      "en": "Crop and zoom the profile picture, launch screen with app icon"
-     },
-     "category": "qol"
+      "title": {
+        "de": "Trinkhistorie importieren",
+        "en": "Import drink history"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios"
+      ],
+      "timing": {
+        "de": "0.7 Build 7",
+        "en": "0.7 build 7"
+      }
+    },
+    {
+      "title": {
+        "de": "Widgets zeigen den Behälter der Startseite",
+        "en": "Widgets show the container from the home screen"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "offen",
+        "en": "open"
+      }
     }
-   ]
-  },
-  {
-   "platform": "ios",
-   "version": {
-    "de": "0.6 Build 5",
-    "en": "0.6 build 5"
-   },
-   "date": {
-    "de": "August 2026",
-    "en": "August 2026"
-   },
-   "status": "done",
-   "entries": [
+  ],
+  "releases": [
     {
-     "title": {
-      "de": "iOS-27-Stabilitätsupdate",
-      "en": "iOS 27 stability update"
-     },
-     "category": "fixed"
+      "platform": "ios",
+      "version": {
+        "de": "0.7 Build 6",
+        "en": "0.7 build 6"
+      },
+      "date": {
+        "de": "November 2026",
+        "en": "November 2026"
+      },
+      "status": "inProgress",
+      "entries": [
+        {
+          "title": {
+            "de": "Eigene Getränke anlegen",
+            "en": "Create your own drinks"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Homescreen-Widgets mit Schnellzugriff-Buttons und vier Designs (Premium)",
+            "en": "Home screen widgets with quick-add buttons and four designs (Premium)"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Neue Getränkegruppe Suppe und Brühe mit vier Suppen",
+            "en": "New drink group soup and broth with four soups"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Erinnerungen mit zehn abwechselnden Texten",
+            "en": "Reminders with ten alternating texts"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Hilfe: neuer Artikel zu Widgets, Konto-Artikel aktualisiert",
+            "en": "Help: new article on widgets, account article updated"
+          },
+          "category": "changed"
+        },
+        {
+          "title": {
+            "de": "Bestätigung beim Hinzufügen eines Getränks mit Rückgängig und Vibrieren",
+            "en": "Confirmation when adding a drink, with undo and haptic feedback"
+          },
+          "category": "qol"
+        },
+        {
+          "title": {
+            "de": "Profilbild zuschneiden und zoomen, Ladebildschirm mit App-Icon",
+            "en": "Crop and zoom the profile picture, launch screen with app icon"
+          },
+          "category": "qol"
+        }
+      ]
+    },
+    {
+      "platform": "ios",
+      "version": {
+        "de": "0.6 Build 5",
+        "en": "0.6 build 5"
+      },
+      "date": {
+        "de": "August 2026",
+        "en": "August 2026"
+      },
+      "status": "done",
+      "entries": [
+        {
+          "title": {
+            "de": "iOS-27-Stabilitätsupdate",
+            "en": "iOS 27 stability update"
+          },
+          "category": "fixed"
+        }
+      ]
+    },
+    {
+      "platform": "ios",
+      "version": {
+        "de": "0.6 Build 4",
+        "en": "0.6 build 4"
+      },
+      "date": {
+        "de": "14.08.2026",
+        "en": "14.08.2026"
+      },
+      "status": "done",
+      "entries": [
+        {
+          "title": {
+            "de": "Widgets für die Watch",
+            "en": "Widgets for the watch face"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Weitere Watch-Designs",
+            "en": "More Watch designs"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Pixel-Emoji-Behälter auch für das iPhone",
+            "en": "Pixel emoji containers now on iPhone too"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Überarbeitung der bestehenden Behälter-Designs",
+            "en": "Rework of existing container designs"
+          },
+          "category": "changed"
+        },
+        {
+          "title": {
+            "de": "Pixel- und Früchte-Designs der Watch als Premium-Funktion",
+            "en": "Pixel and fruit designs of the Watch as a Premium feature"
+          },
+          "category": "changed"
+        },
+        {
+          "title": {
+            "de": "Automatisches Tagesziel: Geschlecht ergänzt, Standort-Temperatur mit Ist- und Höchstwert",
+            "en": "Automatic daily goal: gender added, location temperature with current and maximum value"
+          },
+          "category": "changed"
+        },
+        {
+          "title": {
+            "de": "Größere Schrift und Buttons auf dem iPhone, Scrollrad und größere Icons auf der Watch",
+            "en": "Larger text and buttons on iPhone, scroll wheel values and larger icons on the Watch"
+          },
+          "category": "qol"
+        }
+      ]
+    },
+    {
+      "platform": "ios",
+      "version": {
+        "de": "0.6 Build 3",
+        "en": "0.6 build 3"
+      },
+      "date": {
+        "de": "11.08.2026",
+        "en": "11.08.2026"
+      },
+      "status": "done",
+      "entries": [
+        {
+          "title": {
+            "de": "Erste Uhren-Designs",
+            "en": "First Watch designs"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Absturz auf älteren Geräten korrigiert",
+            "en": "Crash on older devices fixed"
+          },
+          "category": "fixed"
+        }
+      ]
+    },
+    {
+      "platform": "ios",
+      "version": {
+        "de": "0.6 Build 2",
+        "en": "0.6 build 2"
+      },
+      "date": {
+        "de": "10.08.2026",
+        "en": "10.08.2026"
+      },
+      "status": "done",
+      "entries": [
+        {
+          "title": {
+            "de": "Erste Testrunde",
+            "en": "First test round"
+          },
+          "category": "new"
+        }
+      ]
+    },
+    {
+      "platform": "android",
+      "version": {
+        "de": "0.6.8",
+        "en": "0.6.8"
+      },
+      "date": {
+        "de": "November 2026",
+        "en": "November 2026"
+      },
+      "status": "inProgress",
+      "entries": [
+        {
+          "title": {
+            "de": "Bestätigung mit Rückgängig auch in „Alle Getränke“ und „Nachtragen“",
+            "en": "Confirmation with undo now also in “All drinks” and “Log retroactively”"
+          },
+          "category": "qol"
+        }
+      ]
+    },
+    {
+      "platform": "android",
+      "version": {
+        "de": "0.6.7",
+        "en": "0.6.7"
+      },
+      "date": {
+        "de": "November 2026",
+        "en": "November 2026"
+      },
+      "status": "done",
+      "entries": [
+        {
+          "title": {
+            "de": "Android-App im Test, mit Basis für die Uhren-App (Wear OS)",
+            "en": "Android app in testing, with the groundwork for the watch app (Wear OS)"
+          },
+          "category": "new"
+        }
+      ]
+    },
+    {
+      "platform": "android",
+      "version": {
+        "de": "0.6.9",
+        "en": "0.6.9"
+      },
+      "date": {
+        "de": "November 2026",
+        "en": "November 2026"
+      },
+      "status": "inProgress",
+      "entries": [
+        {
+          "title": {
+            "de": "Wochenrückblick: deine Kalenderwoche von Montag bis Sonntag, mit Vergleich zur Vorwoche (Premium)",
+            "en": "Weekly review: your calendar week from Monday to Sunday, compared with last week (Premium)"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Mitteilungen beim ersten Start auswählen",
+            "en": "Choose your notifications on first launch"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Mitteilungen: Wochenrückblick, Hitze-Hinweis und Premium-Hinweise",
+            "en": "Notifications: weekly review, heat tip and Premium hints"
+          },
+          "category": "new"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "platform": "ios",
-   "version": {
-    "de": "0.6 Build 4",
-    "en": "0.6 build 4"
-   },
-   "date": {
-    "de": "14.08.2026",
-    "en": "14.08.2026"
-   },
-   "status": "done",
-   "entries": [
+  ],
+  "later": [
     {
-     "title": {
-      "de": "Widgets für die Watch",
-      "en": "Widgets for the watch face"
-     },
-     "category": "new"
+      "title": {
+        "de": "Finale Beta 0.9: Abschlusstest vor der Veröffentlichung",
+        "en": "Final beta 0.9: last test before release"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "Q4 2026",
+        "en": "Q4 2026"
+      }
     },
     {
-     "title": {
-      "de": "Weitere Watch-Designs",
-      "en": "More Watch designs"
-     },
-     "category": "new"
+      "title": {
+        "de": "Veröffentlichung im App Store und bei Google Play (1.0)",
+        "en": "Release in the App Store and on Google Play (1.0)"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "offen",
+        "en": "open"
+      }
     },
     {
-     "title": {
-      "de": "Pixel-Emoji-Behälter auch für das iPhone",
-      "en": "Pixel emoji containers now on iPhone too"
-     },
-     "category": "new"
+      "title": {
+        "de": "Weitere Behälter- und Watch-Designs (1.0.1)",
+        "en": "More container and Watch designs (1.0.1)"
+      },
+      "category": "new",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "offen",
+        "en": "open"
+      }
     },
     {
-     "title": {
-      "de": "Überarbeitung der bestehenden Behälter-Designs",
-      "en": "Rework of existing container designs"
-     },
-     "category": "changed"
-    },
-    {
-     "title": {
-      "de": "Pixel- und Früchte-Designs der Watch als Premium-Funktion",
-      "en": "Pixel and fruit designs of the Watch as a Premium feature"
-     },
-     "category": "changed"
-    },
-    {
-     "title": {
-      "de": "Automatisches Tagesziel: Geschlecht ergänzt, Standort-Temperatur mit Ist- und Höchstwert",
-      "en": "Automatic daily goal: gender added, location temperature with current and maximum value"
-     },
-     "category": "changed"
-    },
-    {
-     "title": {
-      "de": "Größere Schrift und Buttons auf dem iPhone, Scrollrad und größere Icons auf der Watch",
-      "en": "Larger text and buttons on iPhone, scroll wheel values and larger icons on the Watch"
-     },
-     "category": "qol"
+      "title": {
+        "de": "Nährwerte bei Getränken, Barcode-Scan und erweiterte Auswertung (1.1)",
+        "en": "Nutrition values for drinks, barcode scan and expanded analysis (1.1)"
+      },
+      "category": "changed",
+      "status": "planned",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "timing": {
+        "de": "offen",
+        "en": "open"
+      }
     }
-   ]
-  },
-  {
-   "platform": "ios",
-   "version": {
-    "de": "0.6 Build 3",
-    "en": "0.6 build 3"
-   },
-   "date": {
-    "de": "11.08.2026",
-    "en": "11.08.2026"
-   },
-   "status": "done",
-   "entries": [
-    {
-     "title": {
-      "de": "Erste Uhren-Designs",
-      "en": "First Watch designs"
-     },
-     "category": "new"
-    },
-    {
-     "title": {
-      "de": "Absturz auf älteren Geräten korrigiert",
-      "en": "Crash on older devices fixed"
-     },
-     "category": "fixed"
-    }
-   ]
-  },
-  {
-   "platform": "ios",
-   "version": {
-    "de": "0.6 Build 2",
-    "en": "0.6 build 2"
-   },
-   "date": {
-    "de": "10.08.2026",
-    "en": "10.08.2026"
-   },
-   "status": "done",
-   "entries": [
-    {
-     "title": {
-      "de": "Erste Testrunde",
-      "en": "First test round"
-     },
-     "category": "new"
-    }
-   ]
-  },
-  {
-   "platform": "android",
-   "version": {
-    "de": "0.6.8",
-    "en": "0.6.8"
-   },
-   "date": {
-    "de": "November 2026",
-    "en": "November 2026"
-   },
-   "status": "inProgress",
-   "entries": [
-    {
-     "title": {
-      "de": "Bestätigung mit Rückgängig auch in „Alle Getränke“ und „Nachtragen“",
-      "en": "Confirmation with undo now also in “All drinks” and “Log retroactively”"
-     },
-     "category": "qol"
-    }
-   ]
-  },
-  {
-   "platform": "android",
-   "version": {
-    "de": "0.6.7",
-    "en": "0.6.7"
-   },
-   "date": {
-    "de": "November 2026",
-    "en": "November 2026"
-   },
-   "status": "done",
-   "entries": [
-    {
-     "title": {
-      "de": "Android-App im Test, mit Basis für die Uhren-App (Wear OS)",
-      "en": "Android app in testing, with the groundwork for the watch app (Wear OS)"
-     },
-     "category": "new"
-    }
-   ]
-  }
- ],
- "later": [
-  {
-   "title": {
-    "de": "Finale Beta 0.9: Abschlusstest vor der Veröffentlichung",
-    "en": "Final beta 0.9: last test before release"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "Q4 2026",
-    "en": "Q4 2026"
-   }
-  },
-  {
-   "title": {
-    "de": "Veröffentlichung im App Store und bei Google Play (1.0)",
-    "en": "Release in the App Store and on Google Play (1.0)"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "offen",
-    "en": "open"
-   }
-  },
-  {
-   "title": {
-    "de": "Weitere Behälter- und Watch-Designs (1.0.1)",
-    "en": "More container and Watch designs (1.0.1)"
-   },
-   "category": "new",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "offen",
-    "en": "open"
-   }
-  },
-  {
-   "title": {
-    "de": "Nährwerte bei Getränken, Barcode-Scan und erweiterte Auswertung (1.1)",
-    "en": "Nutrition values for drinks, barcode scan and expanded analysis (1.1)"
-   },
-   "category": "changed",
-   "status": "planned",
-   "platforms": [
-    "ios",
-    "android"
-   ],
-   "timing": {
-    "de": "offen",
-    "en": "open"
-   }
-  }
- ]
+  ]
 }

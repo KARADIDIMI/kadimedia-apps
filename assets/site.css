@@ -432,3 +432,11 @@ nav { flex-wrap:nowrap; }
 .ddbtn.wide { height:2.5rem; box-sizing:border-box; border-radius:.7rem; }
 @media (max-width:64rem) { nav { gap:.5rem; } header.top .wrap { gap:.5rem; } .burger { margin-left:0; } }
 .theme svg, .burger svg { width:22px; height:22px; }
+
+/* roadmap: iOS left, Android right when both are shown */
+.rmwrap { max-width:72rem; }
+.rcols { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2rem; align-items:start; }
+.rch { margin:0 0 .6rem; } .rch .pl { font-size:.8rem; padding:.15rem .65rem; }
+.rempty { color:var(--muted); margin:.2rem 0; }
+.vstack { display:flex; flex-direction:column; gap:1rem; }
+@media (max-width:48rem) { .rcols { grid-template-columns:minmax(0,1fr); gap:1.6rem; } }
