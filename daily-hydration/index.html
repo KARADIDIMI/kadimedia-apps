@@ -75,7 +75,7 @@
       <label class="sl"><span>Getrunken in Prozent des Tagesziels</span><input type="range" min="0" max="100" value="45" step="1" aria-label="Getrunken in Prozent des Tagesziels"></label>
       <p class="readout"><b class="ro-ml">900 ml</b> <span class="ro-of">/ 2000 ml Tagesziel</span> · <span class="ro-mood">Zufrieden</span></p>
       <p class="ebnote">Pixel-Behälter gehören zu den Premium-Designs.</p></div>
-      <div class="emoright"><span class="pxbig"><img class="px big" src="/daily-hydration/assets/pixel/smiley-content.svg" alt="" width="96" height="96" loading="lazy"></span></div></div></div></section><div class="wrap"><section class="feature flip">
+      <div class="emoright"><span class="pxbig"><img class="px big" src="/daily-hydration/assets/pixel/smiley-content.svg" alt="" width="96" height="96"></span></div></div></div></section><div class="wrap"><section class="feature flip">
       <div class="shot"><img src="/daily-hydration/assets/shot-04.jpg" alt="Verstehe dein Trinkverhalten" loading="lazy" width="360" height="640"></div>
       <div class="copy"><p class="kicker">Auswertung nach Woche und Monat – mit Kalorien und Koffein.</p><h3>Verstehe dein Trinkverhalten</h3><p>Die Auswertung zeigt dir, was und wie viel du trinkst – nach Tag, Woche, Monat und Jahr. Dazu siehst du, wie sich Wasser, Tee, Kaffee und Co. auf deine Kalorien und dein Koffein verteilen.</p><ul><li>Menge, Kalorien und Koffein im Verlauf</li><li>Anteil der Getränkearten auf einen Blick</li><li>Erweiterte Auswertungen mit Premium</li></ul></div>
     </section>
@@ -212,6 +212,8 @@
     img.src='/daily-hydration/assets/pixel/'+c+'-'+moods[i]+'.svg';
     s.querySelector('.ro-ml').textContent=ml+' ml'; s.querySelector('.ro-mood').textContent=names[i];
   };
+  // Load every face up front, so dragging the slider never waits for a download.
+  ['smiley','strawberry'].forEach(function(c){moods.forEach(function(m){var p=new Image(); p.src='/daily-hydration/assets/pixel/'+c+'-'+m+'.svg';});});
   rng.addEventListener('input',s.update); s.update();
 })();
 </script>

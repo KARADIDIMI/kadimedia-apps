@@ -75,7 +75,7 @@
       <label class="sl"><span>Amount drunk as a percentage of the daily goal</span><input type="range" min="0" max="100" value="45" step="1" aria-label="Amount drunk as a percentage of the daily goal"></label>
       <p class="readout"><b class="ro-ml">900 ml</b> <span class="ro-of">/ 2000 ml Daily goal</span> · <span class="ro-mood">Zufrieden</span></p>
       <p class="ebnote">Pixel containers are part of the Premium designs.</p></div>
-      <div class="emoright"><span class="pxbig"><img class="px big" src="/daily-hydration/assets/pixel/smiley-content.svg" alt="" width="96" height="96" loading="lazy"></span></div></div></div></section><div class="wrap"><section class="feature flip">
+      <div class="emoright"><span class="pxbig"><img class="px big" src="/daily-hydration/assets/pixel/smiley-content.svg" alt="" width="96" height="96"></span></div></div></div></section><div class="wrap"><section class="feature flip">
       <div class="shot"><img src="/daily-hydration/assets/shot-en-04.jpg" alt="Understand your drinking habits" loading="lazy" width="360" height="640"></div>
       <div class="copy"><p class="kicker">Analysis by week and month – with calories and caffeine.</p><h3>Understand your drinking habits</h3><p>The analysis shows what and how much you drink – by day, week, month and year – and how water, tea, coffee and the rest contribute to your calories and caffeine.</p><ul><li>Volume, calories and caffeine over time</li><li>Share of each drink type at a glance</li><li>Extended analysis with Premium</li></ul></div>
     </section>
@@ -212,6 +212,8 @@
     img.src='/daily-hydration/assets/pixel/'+c+'-'+moods[i]+'.svg';
     s.querySelector('.ro-ml').textContent=ml+' ml'; s.querySelector('.ro-mood').textContent=names[i];
   };
+  // Load every face up front, so dragging the slider never waits for a download.
+  ['smiley','strawberry'].forEach(function(c){moods.forEach(function(m){var p=new Image(); p.src='/daily-hydration/assets/pixel/'+c+'-'+m+'.svg';});});
   rng.addEventListener('input',s.update); s.update();
 })();
 </script>
