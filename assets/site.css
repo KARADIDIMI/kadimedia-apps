@@ -413,3 +413,16 @@ nav { flex-wrap:nowrap; }
 .dd.lang, .ddbtn.wide { flex-shrink:0; white-space:nowrap; }
 .ddbtn.wide .lt, .ddbtn.wide b { white-space:nowrap; }
 @media (max-width:82rem) and (min-width:64.01rem) { nav { gap:.9rem; font-size:.92rem; } }
+
+/* mobile: the face sits right above the slider so it stays in view while dragging */
+@media (max-width:48rem) {
+  .emocard { display:flex; flex-direction:column; gap:.4rem; }
+  .emoleft { display:contents; }
+  .emoleft > * { order:1; }
+  .emoleft > .ctabs { order:2; margin-bottom:.4rem; }
+  .emocard > .emoright { order:3; justify-content:center; margin:.2rem 0 .6rem; }
+  .emoleft > .sl, .emoleft > .readout { order:4; }
+  .emoleft > .ebnote { order:5; }
+  .pxbig { width:min(60%,9rem); }
+  .emoleft > .readout { text-align:center; margin:0 0 .4rem; }
+}
