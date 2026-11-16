@@ -183,6 +183,34 @@
             "en": "Crop and zoom the profile picture, launch screen with app icon"
           },
           "category": "qol"
+        },
+        {
+          "title": {
+            "de": "Wochenrückblick: deine Kalenderwoche von Montag bis Sonntag, mit Vergleich zur Vorwoche (Premium)",
+            "en": "Weekly review: your calendar week from Monday to Sunday, compared with last week (Premium)"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Mitteilungen beim ersten Start auswählen",
+            "en": "Choose your notifications on first launch"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Mitteilungen: Wochenrückblick, Hitze-Hinweis und Premium-Hinweise",
+            "en": "Notifications: weekly review, heat tip and Premium hints"
+          },
+          "category": "new"
+        },
+        {
+          "title": {
+            "de": "Pixel-Emoji heißt jetzt Stimmungs-Behälter",
+            "en": "Pixel emoji is now called Mood containers"
+          },
+          "category": "changed"
         }
       ]
     },
@@ -393,6 +421,13 @@
             "en": "Notifications: weekly review, heat tip and Premium hints"
           },
           "category": "new"
+        },
+        {
+          "title": {
+            "de": "Karte Wochenrückblick auf der Startseite, sonntags und montags",
+            "en": "Weekly review card on the home screen on Sundays and Mondays"
+          },
+          "category": "qol"
         }
       ]
     }

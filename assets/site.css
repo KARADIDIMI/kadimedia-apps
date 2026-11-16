@@ -423,7 +423,10 @@ nav { flex-wrap:nowrap; }
   .emocard > .emoright { order:3; justify-content:center; margin:.2rem 0 .6rem; }
   .emoleft > .sl, .emoleft > .readout { order:4; }
   .emoleft > .ebnote { order:5; }
-  .pxbig { width:min(60%,9rem); }
+  .emocard { align-items:stretch; }
+  .emocard > .emoright { width:100%; }
+  .pxbig { width:9rem; height:9rem; flex:none; }
+  .pxbig .px.big { width:6.5rem; height:6.5rem; }
   .emoleft > .readout { text-align:center; margin:0 0 .4rem; }
 }
 
