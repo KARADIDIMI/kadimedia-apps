@@ -133,7 +133,7 @@
         "de": "November 2026",
         "en": "November 2026"
       },
-      "status": "inProgress",
+      "status": "done",
       "entries": [
         {
           "title": {
@@ -350,14 +350,14 @@
     {
       "platform": "android",
       "version": {
-        "de": "0.6.8",
-        "en": "0.6.8"
+        "de": "0.6.8 Build 10",
+        "en": "0.6.8 build 10"
       },
       "date": {
         "de": "November 2026",
         "en": "November 2026"
       },
-      "status": "inProgress",
+      "status": "done",
       "entries": [
         {
           "title": {
@@ -371,8 +371,8 @@
     {
       "platform": "android",
       "version": {
-        "de": "0.6.7",
-        "en": "0.6.7"
+        "de": "0.6.7 Build 8",
+        "en": "0.6.7 build 8"
       },
       "date": {
         "de": "November 2026",
@@ -392,14 +392,14 @@
     {
       "platform": "android",
       "version": {
-        "de": "0.6.9",
-        "en": "0.6.9"
+        "de": "0.6.9 Build 14",
+        "en": "0.6.9 build 14"
       },
       "date": {
         "de": "November 2026",
         "en": "November 2026"
       },
-      "status": "inProgress",
+      "status": "done",
       "entries": [
         {
           "title": {
